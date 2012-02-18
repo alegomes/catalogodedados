@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218125916) do
+ActiveRecord::Schema.define(:version => 20120218133836) do
 
   create_table "formato_datasets", :force => true do |t|
     t.string   "nome"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20120218125916) do
     t.string   "url"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "orgao_id"
   end
 
   add_index "links", ["tipo_link_id"], :name => "index_links_on_tipo_link_id"
