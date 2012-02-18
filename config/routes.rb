@@ -1,4 +1,6 @@
 Catalogodedados::Application.routes.draw do
+  resources :tipo_datasets
+
   resources :licencas
 
   resources :siorgs
