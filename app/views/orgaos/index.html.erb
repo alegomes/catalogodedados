@@ -30,7 +30,7 @@
     <td><%= orgao.licenca.nome %></td>
 	<td><table>
 		<% orgao.links.each do |link| %>
-		<tr><td><%= link.titulo %></td><td><% link.url %></td></tr>
+		<tr><td><%= link.titulo %></td><td><%= link.url %></td></tr>
 		<% end %>
 	</table></td>
     <td><%= link_to 'Show', orgao %></td>

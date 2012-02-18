@@ -25,6 +25,7 @@ class OrgaosController < ApplicationController
   # GET /orgaos/new.json
   def new
     @orgao = Orgao.new
+		5.times { @orgao.links.build }
 
     respond_to do |format|
       format.html # new.html.erb

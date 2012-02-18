@@ -47,6 +47,19 @@
     <%= f.label :licenca %><br />
     <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome) %>
   </div>
+  <div class="field">
+	<table>
+		<td>Tipo</td><td>Titulo</td><td>URL</td>
+		<%= f.fields_for :links do |l| %>
+		    <tr>
+				<td><%= l.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo) %></td>
+				<td><%= l.text_field :titulo %></td>
+				<td><%= l.text_field :url %></td>
+			</tr>
+	    <% end %>
+	</table>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

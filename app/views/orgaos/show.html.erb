@@ -37,14 +37,27 @@
 
 <p>
   <b>Siorg:</b>
-  <%= @orgao.siorg %>
+  <%= @orgao.siorg.nome %>
 </p>
 
 <p>
   <b>Licenca:</b>
-  <%= @orgao.licenca %>
+  <%= @orgao.licenca.nome %>
 </p>
 
+<p>
+  <b>Links</b>
+  <table>
+	<tr><th>Tipo</th><th>Titulo</th><th>URL</th></tr>
+		<% @orgao.links.each do |link| %>
+			<tr>
+				<td><%= link.tipo_link.tipo %></td>
+				<td><%= link.titulo %></td>
+				<td><%= link.url %></td>
+			</tr>
+		<% end %>
+  </table>
+</p>
 
 <%= link_to 'Edit', edit_orgao_path(@orgao) %> |
 <%= link_to 'Back', orgaos_path %>
