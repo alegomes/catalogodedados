@@ -1,4 +1,6 @@
 Catalogodedados::Application.routes.draw do
+  resources :tipo_links
+
   resources :granularidade_geograficas
 
   resources :granularidade_temporals
