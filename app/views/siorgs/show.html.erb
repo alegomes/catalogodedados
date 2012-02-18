@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @siorg.nome %>
+</p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @siorg.codigo %>
+</p>
+
+
+<%= link_to 'Edit', edit_siorg_path(@siorg) %> |
+<%= link_to 'Back', siorgs_path %>

@@ -1,0 +1,25 @@
+<h1>Listing siorgs</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Codigo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @siorgs.each do |siorg| %>
+  <tr>
+    <td><%= siorg.nome %></td>
+    <td><%= siorg.codigo %></td>
+    <td><%= link_to 'Show', siorg %></td>
+    <td><%= link_to 'Edit', edit_siorg_path(siorg) %></td>
+    <td><%= link_to 'Destroy', siorg, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Siorg', new_siorg_path %>
