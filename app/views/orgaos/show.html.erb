@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @orgao.nome %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @orgao.url %>
+</p>
+
+<p>
+  <b>Url sobre:</b>
+  <%= @orgao.url_sobre %>
+</p>
+
+<p>
+  <b>Url competencias:</b>
+  <%= @orgao.url_competencias %>
+</p>
+
+<p>
+  <b>Url historico:</b>
+  <%= @orgao.url_historico %>
+</p>
+
+<p>
+  <b>Url organograma:</b>
+  <%= @orgao.url_organograma %>
+</p>
+
+<p>
+  <b>Url quem e quem:</b>
+  <%= @orgao.url_quem_e_quem %>
+</p>
+
+<p>
+  <b>Siorg:</b>
+  <%= @orgao.siorg %>
+</p>
+
+<p>
+  <b>Licenca:</b>
+  <%= @orgao.licenca %>
+</p>
+
+
+<%= link_to 'Edit', edit_orgao_path(@orgao) %> |
+<%= link_to 'Back', orgaos_path %>

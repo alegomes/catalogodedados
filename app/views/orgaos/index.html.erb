@@ -1,0 +1,39 @@
+<h1>Listing orgaos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Url</th>
+    <th>Url sobre</th>
+    <th>Url competencias</th>
+    <th>Url historico</th>
+    <th>Url organograma</th>
+    <th>Url quem e quem</th>
+    <th>Siorg</th>
+    <th>Licenca</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orgaos.each do |orgao| %>
+  <tr>
+    <td><%= orgao.nome %></td>
+    <td><%= orgao.url %></td>
+    <td><%= orgao.url_sobre %></td>
+    <td><%= orgao.url_competencias %></td>
+    <td><%= orgao.url_historico %></td>
+    <td><%= orgao.url_organograma %></td>
+    <td><%= orgao.url_quem_e_quem %></td>
+    <td><%= orgao.siorg %></td>
+    <td><%= orgao.licenca %></td>
+    <td><%= link_to 'Show', orgao %></td>
+    <td><%= link_to 'Edit', edit_orgao_path(orgao) %></td>
+    <td><%= link_to 'Destroy', orgao, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Orgao', new_orgao_path %>

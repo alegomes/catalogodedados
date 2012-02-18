@@ -1,4 +1,6 @@
 Catalogodedados::Application.routes.draw do
+  resources :orgaos
+
   resources :vcges
 
   resources :links

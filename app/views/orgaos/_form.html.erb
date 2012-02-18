@@ -1,0 +1,53 @@
+<%= form_for(@orgao) do |f| %>
+  <% if @orgao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orgao.errors.count, "error") %> prohibited this orgao from being saved:</h2>
+
+      <ul>
+      <% @orgao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :url_sobre %><br />
+    <%= f.text_field :url_sobre %>
+  </div>
+  <div class="field">
+    <%= f.label :url_competencias %><br />
+    <%= f.text_field :url_competencias %>
+  </div>
+  <div class="field">
+    <%= f.label :url_historico %><br />
+    <%= f.text_field :url_historico %>
+  </div>
+  <div class="field">
+    <%= f.label :url_organograma %><br />
+    <%= f.text_field :url_organograma %>
+  </div>
+  <div class="field">
+    <%= f.label :url_quem_e_quem %><br />
+    <%= f.text_field :url_quem_e_quem %>
+  </div>
+  <div class="field">
+    <%= f.label :siorg %><br />
+    <%= f.text_field :siorg %>
+  </div>
+  <div class="field">
+    <%= f.label :licenca %><br />
+    <%= f.text_field :licenca %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
