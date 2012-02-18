@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Órgão:</b>
+  <%= @link.orgao.nome if @link.orgao %>
+</p>
+
+<p>
   <b>Tipo link:</b>
   <%= @link.tipo_link.tipo %>
 </p>

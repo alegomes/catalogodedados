@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :orgao %><br />
+    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome) %>
+  </div>
+  <div class="field">
     <%= f.label :tipo_link %><br />
     <%= f.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo) %>
   </div>
