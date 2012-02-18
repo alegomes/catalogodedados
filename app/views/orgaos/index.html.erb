@@ -11,6 +11,7 @@
     <th>Url quem e quem</th>
     <th>Siorg</th>
     <th>Licenca</th>
+	<th>Links</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,8 +26,13 @@
     <td><%= orgao.url_historico %></td>
     <td><%= orgao.url_organograma %></td>
     <td><%= orgao.url_quem_e_quem %></td>
-    <td><%= orgao.siorg %></td>
-    <td><%= orgao.licenca %></td>
+    <td><%= orgao.siorg.nome %></td>
+    <td><%= orgao.licenca.nome %></td>
+	<td><table>
+		<% orgao.links.each do |link| %>
+		<tr><td><%= link.titulo %></td><td><% link.url %></td></tr>
+		<% end %>
+	</table></td>
     <td><%= link_to 'Show', orgao %></td>
     <td><%= link_to 'Edit', edit_orgao_path(orgao) %></td>
     <td><%= link_to 'Destroy', orgao, confirm: 'Are you sure?', method: :delete %></td>
