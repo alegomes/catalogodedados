@@ -1,0 +1,23 @@
+<h1>Listing formato_datasets</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @formato_datasets.each do |formato_dataset| %>
+  <tr>
+    <td><%= formato_dataset.nome %></td>
+    <td><%= link_to 'Show', formato_dataset %></td>
+    <td><%= link_to 'Edit', edit_formato_dataset_path(formato_dataset) %></td>
+    <td><%= link_to 'Destroy', formato_dataset, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Formato dataset', new_formato_dataset_path %>

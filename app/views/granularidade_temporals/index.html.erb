@@ -1,0 +1,23 @@
+<h1>Listing granularidade_temporals</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @granularidade_temporals.each do |granularidade_temporal| %>
+  <tr>
+    <td><%= granularidade_temporal.nome %></td>
+    <td><%= link_to 'Show', granularidade_temporal %></td>
+    <td><%= link_to 'Edit', edit_granularidade_temporal_path(granularidade_temporal) %></td>
+    <td><%= link_to 'Destroy', granularidade_temporal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Granularidade temporal', new_granularidade_temporal_path %>

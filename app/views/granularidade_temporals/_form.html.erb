@@ -1,0 +1,21 @@
+<%= form_for(@granularidade_temporal) do |f| %>
+  <% if @granularidade_temporal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@granularidade_temporal.errors.count, "error") %> prohibited this granularidade_temporal from being saved:</h2>
+
+      <ul>
+      <% @granularidade_temporal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

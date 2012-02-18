@@ -1,0 +1,21 @@
+<%= form_for(@tipo_link) do |f| %>
+  <% if @tipo_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_link.errors.count, "error") %> prohibited this tipo_link from being saved:</h2>
+
+      <ul>
+      <% @tipo_link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

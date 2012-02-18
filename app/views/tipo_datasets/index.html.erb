@@ -1,0 +1,23 @@
+<h1>Listing tipo_datasets</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_datasets.each do |tipo_dataset| %>
+  <tr>
+    <td><%= tipo_dataset.nome %></td>
+    <td><%= link_to 'Show', tipo_dataset %></td>
+    <td><%= link_to 'Edit', edit_tipo_dataset_path(tipo_dataset) %></td>
+    <td><%= link_to 'Destroy', tipo_dataset, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo dataset', new_tipo_dataset_path %>

@@ -1,0 +1,2 @@
+module TipoLinksHelper
+end

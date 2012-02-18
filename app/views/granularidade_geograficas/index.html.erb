@@ -1,0 +1,23 @@
+<h1>Listing granularidade_geograficas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @granularidade_geograficas.each do |granularidade_geografica| %>
+  <tr>
+    <td><%= granularidade_geografica.nome %></td>
+    <td><%= link_to 'Show', granularidade_geografica %></td>
+    <td><%= link_to 'Edit', edit_granularidade_geografica_path(granularidade_geografica) %></td>
+    <td><%= link_to 'Destroy', granularidade_geografica, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Granularidade geografica', new_granularidade_geografica_path %>
