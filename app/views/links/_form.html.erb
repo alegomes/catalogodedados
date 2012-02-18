@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :tipo_link %><br />
-    <%= f.text_field :tipo_link %>
+    <%= f.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo) %>
   </div>
   <div class="field">
     <%= f.label :titulo %><br />

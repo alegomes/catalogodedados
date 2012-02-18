@@ -11,11 +11,58 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218112908) do
+ActiveRecord::Schema.define(:version => 20120218115842) do
+
+  create_table "formato_datasets", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "granularidade_geograficas", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "granularidade_temporals", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "licencas", :force => true do |t|
+    t.string   "nome"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "links", :force => true do |t|
+    t.integer  "tipo_link_id"
+    t.string   "titulo"
+    t.string   "url"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "links", ["tipo_link_id"], :name => "index_links_on_tipo_link_id"
 
   create_table "siorgs", :force => true do |t|
     t.string   "nome"
     t.string   "codigo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_datasets", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_links", :force => true do |t|
+    t.string   "tipo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
