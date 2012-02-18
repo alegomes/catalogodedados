@@ -12,7 +12,7 @@
 
 <% @links.each do |link| %>
   <tr>
-    <td><%= link.tipo_link %></td>
+    <td><%= link.tipo_link.tipo %></td>
     <td><%= link.titulo %></td>
     <td><%= link.url %></td>
     <td><%= link_to 'Show', link %></td>
