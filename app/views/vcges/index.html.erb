@@ -11,7 +11,7 @@
 
 <% @vcges.each do |vcge| %>
   <tr>
-    <td><%= vcge.termo_pai %></td>
+    <td><%= vcge.termo_pai.termo if vcge.termo_pai %></td>
     <td><%= vcge.termo %></td>
     <td><%= link_to 'Show', vcge %></td>
     <td><%= link_to 'Edit', edit_vcge_path(vcge) %></td>
