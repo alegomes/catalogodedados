@@ -1,4 +1,8 @@
 Catalogodedados::Application.routes.draw do
+  resources :granularidade_geograficas
+
+  resources :granularidade_temporals
+
   resources :formato_datasets
 
   resources :tipo_datasets
