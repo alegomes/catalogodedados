@@ -41,11 +41,11 @@
   </div>
   <div class="field">
     <%= f.label :siorg %><br />
-    <%= f.text_field :siorg %>
+    <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome) %>
   </div>
   <div class="field">
     <%= f.label :licenca %><br />
-    <%= f.text_field :licenca %>
+    <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome) %>
   </div>
   <div class="actions">
     <%= f.submit %>

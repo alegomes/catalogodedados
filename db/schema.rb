@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218121756) do
+ActiveRecord::Schema.define(:version => 20120218125916) do
 
   create_table "formato_datasets", :force => true do |t|
     t.string   "nome"
@@ -47,6 +47,23 @@ ActiveRecord::Schema.define(:version => 20120218121756) do
   end
 
   add_index "links", ["tipo_link_id"], :name => "index_links_on_tipo_link_id"
+
+  create_table "orgaos", :force => true do |t|
+    t.string   "nome"
+    t.string   "url"
+    t.string   "url_sobre"
+    t.string   "url_competencias"
+    t.string   "url_historico"
+    t.string   "url_organograma"
+    t.string   "url_quem_e_quem"
+    t.integer  "siorg_id"
+    t.integer  "licenca_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "orgaos", ["licenca_id"], :name => "index_orgaos_on_licenca_id"
+  add_index "orgaos", ["siorg_id"], :name => "index_orgaos_on_siorg_id"
 
   create_table "siorgs", :force => true do |t|
     t.string   "nome"
