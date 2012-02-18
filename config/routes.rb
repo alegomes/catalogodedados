@@ -1,4 +1,6 @@
 Catalogodedados::Application.routes.draw do
+  resources :vcges
+
   resources :links
 
   resources :tipo_links
