@@ -13,9 +13,10 @@
 
   <div class="field">
     <%= f.label :termo_pai %><br />
-    <%= f.collection_select(:termo_pai_id, Vcge.all, :id, :termo) %>
-
-    <%= f.text_field :termo_pai %>
+	<% vcges = Vcge.all
+	   vcges.delete(@vcge) 
+	%>
+    <%= f.collection_select(:termo_pai_id, vcges, :id, :termo) %>
   </div>
   <div class="field">
     <%= f.label :termo %><br />
