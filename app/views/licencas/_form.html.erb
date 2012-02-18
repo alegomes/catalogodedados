@@ -1,0 +1,25 @@
+<%= form_for(@licenca) do |f| %>
+  <% if @licenca.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@licenca.errors.count, "error") %> prohibited this licenca from being saved:</h2>
+
+      <ul>
+      <% @licenca.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

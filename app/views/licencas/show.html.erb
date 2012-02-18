@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @licenca.nome %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @licenca.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_licenca_path(@licenca) %> |
+<%= link_to 'Back', licencas_path %>

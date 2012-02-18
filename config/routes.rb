@@ -1,4 +1,6 @@
 Catalogodedados::Application.routes.draw do
+  resources :licencas
+
   resources :siorgs
 
   # The priority is based upon order of creation:
