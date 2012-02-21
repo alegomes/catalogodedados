@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @dataset.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @dataset.descricao %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @dataset.url %>
+</p>
+
+<p>
+  <b>Guarda:</b>
+  <%= @dataset.guarda %>
+</p>
+
+<p>
+  <b>Url documentacao:</b>
+  <%= @dataset.url_documentacao %>
+</p>
+
+<p>
+  <b>Cobertura temporal:</b>
+  <%= @dataset.cobertura_temporal %>
+</p>
+
+<p>
+  <b>Cobertura geografica:</b>
+  <%= @dataset.cobertura_geografica %>
+</p>
+
+<p>
+  <b>Data criacao:</b>
+  <%= @dataset.data_criacao %>
+</p>
+
+<p>
+  <b>Data disponibilizacao:</b>
+  <%= @dataset.data_disponibilizacao %>
+</p>
+
+<p>
+  <b>Origem:</b>
+  <%= @dataset.origem %>
+</p>
+
+<p>
+  <b>Siorg:</b>
+  <%= @dataset.siorg.nome%>
+</p>
+
+<p>
+  <b>Vcge:</b>
+  <%= @dataset.vcge.termo %>
+</p>
+
+<p>
+  <b>Granularidade temporal:</b>
+  <%= @dataset.granularidade_temporal.nome if @dataset.granularidade_temporal %>
+</p>
+
+<p>
+  <b>Granularidade geografica:</b>
+  <%= @dataset.granularidade_geografica.nome if @dataset.granularidade_geografica %>
+</p>
+
+<p>
+  <b>Formato dataset:</b>
+  <%= @dataset.formato_dataset.nome if @dataset.formato_dataset %>
+</p>
+
+<p>
+  <b>Tipo dataset:</b>
+  <%= @dataset.tipo_dataset.tipo if @dataset.tipo_dataset %>
+</p>
+
+<p>
+  <b>Licenca:</b>
+  <%= @dataset.licenca.nome if @dataset.licenca %>
+</p>
+
+<p>
+  <b>Orgao:</b>
+  <%= @dataset.orgao.nome if @dataset.orgao %>
+</p>
+
+
+<%= link_to 'Edit', edit_dataset_path(@dataset) %> |
+<%= link_to 'Back', datasets_path %>

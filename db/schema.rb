@@ -11,7 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218133836) do
+ActiveRecord::Schema.define(:version => 20120218180234) do
+
+  create_table "datasets", :force => true do |t|
+    t.string   "nome"
+    t.text     "descricao"
+    t.string   "url"
+    t.string   "guarda"
+    t.string   "url_documentacao"
+    t.string   "cobertura_temporal"
+    t.string   "cobertura_geografica"
+    t.date     "data_criacao"
+    t.date     "data_disponibilizacao"
+    t.string   "origem"
+    t.integer  "orgao_id"
+    t.integer  "siorg_id"
+    t.integer  "vcge_id"
+    t.integer  "granularidade_temporal_id"
+    t.integer  "granularidade_geografica_id"
+    t.integer  "formato_dataset_id"
+    t.integer  "tipo_dataset_id"
+    t.integer  "licenca_id"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
+
+  add_index "datasets", ["formato_dataset_id"], :name => "index_datasets_on_formato_dataset_id"
+  add_index "datasets", ["granularidade_geografica_id"], :name => "index_datasets_on_granularidade_geografica_id"
+  add_index "datasets", ["granularidade_temporal_id"], :name => "index_datasets_on_granularidade_temporal_id"
+  add_index "datasets", ["licenca_id"], :name => "index_datasets_on_licenca_id"
+  add_index "datasets", ["siorg_id"], :name => "index_datasets_on_siorg_id"
+  add_index "datasets", ["tipo_dataset_id"], :name => "index_datasets_on_tipo_dataset_id"
+  add_index "datasets", ["vcge_id"], :name => "index_datasets_on_vcge_id"
 
   create_table "formato_datasets", :force => true do |t|
     t.string   "nome"

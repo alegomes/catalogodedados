@@ -1,4 +1,6 @@
 Catalogodedados::Application.routes.draw do
+  resources :datasets
+
   resources :orgaos
 
   resources :vcges
