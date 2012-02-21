@@ -56,12 +56,28 @@
 		<h3>Comunicação Externa</h3>
 		<div class="field">
 			<table width='100%'>
-			<% if not f.object.links.empty? %>
-				<td>Título da Página</td><td>URL</td>
-			<% end %>
+			<td>Título da Página</td><td>URL</td>
+
 			<%= f.fields_for :links do |l| %>
 			    <tr>
 					<%= l.hidden_field :tipo_link_id, :value => TipoLink.find_by_tipo('Comunicação Externa').id%>
+					<td><%= l.text_field :titulo, :size => '50' %></td>
+					<td><%= l.text_field :url, :size => '70', :value => 'http://' %></td>
+				</tr>
+			   <% end %>
+			</table>
+			<!-- link_to 'Novo Link', new_orgao_path, :class => 'button' -->
+		</div>
+	</div>
+	
+	<div class='container'>
+		<h3>Subsites</h3>
+		<div class="field">
+			<table width='100%'>
+			<td>Título da Página</td><td>URL</td>
+			<%= f.fields_for :links do |l| %>
+			    <tr>
+					<%= l.hidden_field :tipo_link_id, :value => TipoLink.find_by_tipo('Subsite').id%>
 					<td><%= l.text_field :titulo, :size => '50' %></td>
 					<td><%= l.text_field :url, :size => '70', :value => 'http://' %></td>
 				</tr>

@@ -42,9 +42,8 @@ class OrgaosController < ApplicationController
   # POST /orgaos.json
   def create
     @orgao = Orgao.new(params[:orgao])
-
 		@orgao.links.delete_if do |link|
-			(link.titulo.nil? || link.titulo.empty?) && (link.url.nil? || link.url.empty?)
+			(link.titulo.nil? || link.titulo.empty? || link.url.nil? || link.url.empty?)
 		end
 
     respond_to do |format|
