@@ -24,6 +24,8 @@ Catalogodedados::Application.routes.draw do
 
   resources :siorgs
 
+	match 'orgaos/novo_link' => 'orgaos#new_link'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

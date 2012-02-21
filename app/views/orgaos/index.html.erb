@@ -2,7 +2,7 @@
 
 <div class='center'>
 	
-	<table>
+	<table class='border'>
 	  <tr>
 	    <th width='40%'>Nome do Órgão</th>
 	    <th width='50%'>URL</th>
@@ -14,12 +14,12 @@
 
 	<% @orgaos.each do |orgao| %>
 	  <tr>
-	    <td><%= orgao.nome %></td>
-	    <td><%= orgao.url %></td>
-		<td align='center'><%= orgao.datasets.size %></td>
-	    <td align='center'><%= link_to 'Detalhes', orgao %></td>
-	    <td align='center'><%= link_to 'Editar', edit_orgao_path(orgao) %></td>
-	    <td align='center'><%= link_to 'Remover', orgao, confirm: 'Certeza?', method: :delete %></td>
+	    <td class='border'><%= orgao.nome %></td>
+	    <td class='border'><%= orgao.url %></td>
+		<td class='border' align='center'><%= orgao.datasets.size %></td>
+	    <td class='border' align='center'><%= link_to 'Detalhes', orgao %></td>
+	    <td class='border' align='center'><%= link_to 'Editar', edit_orgao_path(orgao) %></td>
+	    <td class='border' align='center'><%= link_to 'Remover', orgao, confirm: 'Certeza?', method: :delete %></td>
 	  </tr>
 	<% end %>
 	</table>
