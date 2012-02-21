@@ -1,63 +1,85 @@
+<h1>Detalhes de <%= @orgao.nome %></h1>
+
 <p id="notice"><%= notice %></p>
+<div class='container'>
+	<h3>Informações Básicas</h3>
+	<p>
+	  <b>Nome:</b>
+	  <%= @orgao.nome %>
+	</p>
 
-<p>
-  <b>Nome:</b>
-  <%= @orgao.nome %>
-</p>
+	<p>
+	  <b>Siorg:</b>
+	  <%= @orgao.siorg.nome %>
+	</p>
 
-<p>
-  <b>Url:</b>
-  <%= @orgao.url %>
-</p>
+	<p>
+	  <b>Licenca:</b>
+	  <%= @orgao.licenca.nome %>
+	</p>
 
-<p>
-  <b>Url sobre:</b>
-  <%= @orgao.url_sobre %>
-</p>
+	<p>
+	  <b>URL do Site Oficial</b>
+	  <%= @orgao.url %>
+	</p>
 
-<p>
-  <b>Url competencias:</b>
-  <%= @orgao.url_competencias %>
-</p>
+	<p>
+	  <b>URL da Página Sobre</b>
+	  <%= @orgao.url_sobre %>
+	</p>
 
-<p>
-  <b>Url historico:</b>
-  <%= @orgao.url_historico %>
-</p>
+	<p>
+	  <b>URL de Competência</b>
+	  <%= @orgao.url_competencias %>
+	</p>
 
-<p>
-  <b>Url organograma:</b>
-  <%= @orgao.url_organograma %>
-</p>
+	<p>
+	  <b>URL do Histórico</b>
+	  <%= @orgao.url_historico %>
+	</p>
 
-<p>
-  <b>Url quem e quem:</b>
-  <%= @orgao.url_quem_e_quem %>
-</p>
+	<p>
+	  <b>URL do Organograma</b>
+	  <%= @orgao.url_organograma %>
+	</p>
 
-<p>
-  <b>Siorg:</b>
-  <%= @orgao.siorg.nome %>
-</p>
-
-<p>
-  <b>Licenca:</b>
-  <%= @orgao.licenca.nome %>
-</p>
-
-<p>
-  <b>Links</b>
-  <table>
-	<tr><th>Tipo</th><th>Titulo</th><th>URL</th></tr>
+	<p>
+	  <b>URL do Quem é Quem</b>
+	  <%= @orgao.url_quem_e_quem %>
+	</p>
+</div>
+<div class='container'>
+	<h3>Links</h3>
+	<table class='border' width='70%'>
+		<tr><th>Tipo do Link</th><th>Título da Página</th><th>URL</th></tr>
 		<% @orgao.links.each do |link| %>
-			<tr>
-				<td><%= link.tipo_link.tipo %></td>
-				<td><%= link.titulo %></td>
-				<td><%= link.url %></td>
+			<tr class='border'>
+				<td class='border' width='30%'><%= link.tipo_link.tipo %></td>
+				<td class='border' width='40%'><%= link.titulo %></td>
+				<td class='border' width='30%'><%= link.url %></td>
 			</tr>
 		<% end %>
-  </table>
-</p>
+	</table>
+	</p>
+</div>
+<div class='container'>
+	<h3>Datasets</h3>
+	<table class='border' width='70%'>
+		<% if @orgao.datasets.empty? %>
+			Nenhum dataset cadastrado.
+		<% else %>
+			<tr><th>Nome</th><th>Formato</th></tr>
+		<% end %>
+		<% @orgao.datasets.each do |dataset| %>
+			<tr class='border'>
+				<td class='border' width='30%'><%= dataset.nome %></td>
+				<td class='border' width='40%'><%= dataset.formato_dataset.nome %></td>
+			</tr>
+		<% end %>
+	</table>
+	
+	
+</div>
 
-<%= link_to 'Edit', edit_orgao_path(@orgao) %> |
-<%= link_to 'Back', orgaos_path %>
+<%= link_to 'Editar', edit_orgao_path(@orgao) %> |
+<%= link_to 'Voltar', orgaos_path %>
