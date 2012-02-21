@@ -1,6 +1,6 @@
-<h1>Listing tipo_datasets</h1>
+<h1>Tipos de Datasets</h1>
 
-<table>
+<table class='border'>
   <tr>
     <th>Nome</th>
     <th></th>
@@ -11,13 +11,13 @@
 <% @tipo_datasets.each do |tipo_dataset| %>
   <tr>
     <td><%= tipo_dataset.nome %></td>
-    <td><%= link_to 'Show', tipo_dataset %></td>
-    <td><%= link_to 'Edit', edit_tipo_dataset_path(tipo_dataset) %></td>
-    <td><%= link_to 'Destroy', tipo_dataset, confirm: 'Are you sure?', method: :delete %></td>
+    <td align='center'><%= link_to 'Detalhar', tipo_dataset %></td>
+    <td align='center'><%= link_to 'Editar', edit_tipo_dataset_path(tipo_dataset) %></td>
+    <td align='center'><%= link_to 'Apagar', tipo_dataset, confirm: 'Certeza?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tipo dataset', new_tipo_dataset_path %>
+<%= link_to 'Novo Tipo de Dataset', new_tipo_dataset_path, :class => 'button' %>

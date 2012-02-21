@@ -43,3 +43,15 @@ table.border {
 table.border th,td {
 	border: 1px solid black
 }
+footer {
+	margin-top: 20px;
+}
+footer ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+footer ul li {
+	display: inline;
+	font-size:70%;
+}
