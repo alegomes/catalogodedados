@@ -1,8 +1,10 @@
-* Sobre
+Sobre
+=====
 Aplicativo construído para facilitar a catalogação de dados públicos pela equipe de consultores da Controladoria Geral da União - CGU.
 
-* Licença
+Licença
+=======
 Este software é disponibilizado sob a Licença Pública GNU v3.0, conforme os termos dispostos em http://www.gnu.org/licenses/gpl.txt
 
-
-Copyright 2012, Alexandre Gomes
+------------------------------------------------
+<center>Copyright 2012, Alexandre Gomes</center>
