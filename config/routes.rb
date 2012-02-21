@@ -1,4 +1,7 @@
 Catalogodedados::Application.routes.draw do
+
+  root :to => 'orgaos#index'
+
   resources :datasets
 
   resources :orgaos
