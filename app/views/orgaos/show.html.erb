@@ -66,7 +66,7 @@
 	<h3>Datasets</h3>
 	<table class='border' width='70%'>
 		<% if @orgao.datasets.empty? %>
-			Nenhum dataset cadastrado.
+			Nenhum dataset cadastrado.<p/>
 		<% else %>
 			<tr><th>Nome</th><th>Formato</th></tr>
 		<% end %>
@@ -77,8 +77,7 @@
 			</tr>
 		<% end %>
 	</table>
-	
-	
+	<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
 </div>
 
 <%= link_to 'Editar', edit_orgao_path(@orgao) %> |

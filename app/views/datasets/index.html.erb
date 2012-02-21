@@ -1,57 +1,34 @@
-<h1>Listing datasets</h1>
+<h1>Datasets Cadastrados</h1>
 
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Descricao</th>
-    <th>Url</th>
-    <th>Guarda</th>
-    <th>Url documentacao</th>
-    <th>Cobertura temporal</th>
-    <th>Cobertura geografica</th>
-    <th>Data criacao</th>
-    <th>Data disponibilizacao</th>
-    <th>Origem</th>
-    <th>Siorg</th>
-    <th>Vcge</th>
-    <th>Granularidade temporal</th>
-    <th>Granularidade geografica</th>
-    <th>Formato dataset</th>
-    <th>Tipo dataset</th>
-    <th>Licenca</th>
-    <th>Orgao</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class='center'>
+	
+	<table class='border'>
+	  <tr>
+	    <th>Orgao</th>
+	    <th>Tipo dataset</th>
+	    <th>Nome</th>
+	    <th>Formato dataset</th>
+	    <th>Licenca</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
 
-<% @datasets.each do |dataset| %>
-  <tr>
-    <td><%= dataset.nome %></td>
-    <td><%= dataset.descricao %></td>
-    <td><%= dataset.url %></td>
-    <td><%= dataset.guarda %></td>
-    <td><%= dataset.url_documentacao %></td>
-    <td><%= dataset.cobertura_temporal %></td>
-    <td><%= dataset.cobertura_geografica %></td>
-    <td><%= dataset.data_criacao %></td>
-    <td><%= dataset.data_disponibilizacao %></td>
-    <td><%= dataset.origem %></td>
-    <td><%= dataset.siorg %></td>
-    <td><%= dataset.vcge %></td>
-    <td><%= dataset.granularidade_temporal %></td>
-    <td><%= dataset.granularidade_geografica %></td>
-    <td><%= dataset.formato_dataset %></td>
-    <td><%= dataset.tipo_dataset %></td>
-    <td><%= dataset.licenca %></td>
-    <td><%= dataset.orgao %></td>
-    <td><%= link_to 'Show', dataset %></td>
-    <td><%= link_to 'Edit', edit_dataset_path(dataset) %></td>
-    <td><%= link_to 'Destroy', dataset, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<% @datasets.each do |dataset| %>
+	  <tr>
+	    <td><%= dataset.orgao.nome %></td>
+	    <td><%= dataset.tipo_dataset.nome if dataset.tipo_dataset %></td>
+	    <td><%= dataset.nome %></td>
+	    <td><%= dataset.formato_dataset.nome if dataset.formato_dataset %></td>
+	    <td><%= dataset.licenca.nome %></td>
+	    <td align='center'><%= link_to 'Detalhar', dataset %></td>
+	    <td align='center'><%= link_to 'Editar', edit_dataset_path(dataset) %></td>
+	    <td align='center'><%= link_to 'Apagar', dataset, confirm: 'Certeza?', method: :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
 
-<br />
+	<br />
 
-<%= link_to 'New Dataset', new_dataset_path %>
+	<%= link_to 'New Dataset', new_dataset_path, :class => 'button' %>
+</div>

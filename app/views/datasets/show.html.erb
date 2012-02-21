@@ -1,3 +1,4 @@
+<h1><%= @dataset.nome %></h1>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -77,7 +78,7 @@
 
 <p>
   <b>Tipo dataset:</b>
-  <%= @dataset.tipo_dataset.tipo if @dataset.tipo_dataset %>
+  <%= @dataset.tipo_dataset.nome if @dataset.tipo_dataset %>
 </p>
 
 <p>
@@ -91,5 +92,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_dataset_path(@dataset) %> |
-<%= link_to 'Back', datasets_path %>
+<%= link_to 'Editar', edit_dataset_path(@dataset) %> |
+<%= link_to 'Voltar', datasets_path %>

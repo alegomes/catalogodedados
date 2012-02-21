@@ -12,78 +12,93 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+    <%= f.label :orgao, 'Órgão' %><br />
+    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nome, 'Nome' %><br />
+    <%= f.text_field :nome, :size => '70' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipo_dataset, 'Tipo do Dataset' %><br />
+    <%= f.collection_select(:tipo_dataset_id, TipoDataset.all, :id, :nome) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url, 'URL do Dataset' %><br />
+    <%= f.text_field :url, :size => '70' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url_documentacao, 'URL da Documentação' %><br />
+    <%= f.text_field :url_documentacao, :size => '70' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descricao, 'Descrição' %><br />
+    <%= f.text_area :descricao, :size => '50x3' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :formato_dataset, 'Formato' %><br />
+    <%= f.collection_select(:formato_dataset_id, FormatoDataset.all, :id, :nome) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :licenca, 'Licença' %><br />
+    <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :guarda, 'Nome do órgão que detém a guarda dos dados' %><br />
+    <%= f.text_field :guarda, :size => '70' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :origem, 'Origem dos Dados' %><br />
+    <%= f.text_field :origem, :size => '70' %>
   </div>
   <div class="field">
-    <%= f.label :descricao %><br />
-    <%= f.text_area :descricao %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :guarda %><br />
-    <%= f.text_field :guarda %>
-  </div>
-  <div class="field">
-    <%= f.label :url_documentacao %><br />
-    <%= f.text_field :url_documentacao %>
-  </div>
-  <div class="field">
-    <%= f.label :cobertura_temporal %><br />
-    <%= f.text_field :cobertura_temporal %>
-  </div>
-  <div class="field">
-    <%= f.label :cobertura_geografica %><br />
-    <%= f.text_field :cobertura_geografica %>
-  </div>
-  <div class="field">
-    <%= f.label :data_criacao %><br />
-    <%= f.date_select :data_criacao %>
-  </div>
-  <div class="field">
-    <%= f.label :data_disponibilizacao %><br />
-    <%= f.date_select :data_disponibilizacao %>
-  </div>
-  <div class="field">
-    <%= f.label :origem %><br />
-    <%= f.text_field :origem %>
-  </div>
-  <div class="field">
-    <%= f.label :siorg %><br />
+    <%= f.label :siorg, 'Código SIORG' %><br />
     <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome) %>
   </div>
   <div class="field">
-    <%= f.label :vcge %><br />
+    <%= f.label :vcge, 'VCGE' %><br />
     <%= f.collection_select(:vcge_id, Vcge.all, :id, :termo) %>
   </div>
+
   <div class="field">
-    <%= f.label :granularidade_temporal %><br />
+    <%= f.label :granularidade_temporal, 'Granularidade Temporal' %><br />
     <%= f.collection_select(:granularidade_temporal_id, GranularidadeTemporal.all, :id, :nome) %>
   </div>
+
   <div class="field">
-    <%= f.label :granularidade_geografica %><br />
+    <%= f.label :cobertura_temporal, 'Cobertura Temporal' %><br />
+    <%= f.text_field :cobertura_temporal, :size => '70' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :granularidade_geografica, 'Granularidade Geográfica' %><br />
     <%= f.collection_select(:granularidade_geografica_id, GranularidadeGeografica.all, :id, :nome) %>
   </div>
+
   <div class="field">
-    <%= f.label :formato_dataset %><br />
-    <%= f.collection_select(:formato_dataset_id, FormatoDataset.all, :id, :nome) %>
+    <%= f.label :cobertura_geografica, 'Cobertura Geográfica' %><br />
+    <%= f.text_field :cobertura_geografica, :size => '70' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :data_criacao, 'Data de Criação' %><br />
+    <%= f.date_select :data_criacao %>
   </div>
   <div class="field">
-    <%= f.label :tipo_dataset %><br />
-    <%= f.collection_select(:tipo_dataset_id, TipoDataset.all, :id, :nome) %>
+    <%= f.label :data_disponibilizacao, 'Data de Disponibilização' %><br />
+    <%= f.date_select :data_disponibilizacao %>
   </div>
-  <div class="field">
-    <%= f.label :licenca %><br />
-    <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome) %>
-  </div>
-  <div class="field">
-    <%= f.label :orgao %><br />
-    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome) %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Salvar' %>
   </div>
 <% end %>

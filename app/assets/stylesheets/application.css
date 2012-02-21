@@ -40,7 +40,6 @@ table {
 table.border {
 	border-collapse: collapse;
 }
-table.border, th.border, td.border {
+table.border th,td {
 	border: 1px solid black
 }
-
