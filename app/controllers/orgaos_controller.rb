@@ -25,7 +25,10 @@ class OrgaosController < ApplicationController
   # GET /orgaos/new.json
   def new
     @orgao = Orgao.new
-		5.times { @orgao.links.build }
+		15.times { 
+			link = @orgao.links.build 
+			link.url = 'http://'
+		}
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +39,10 @@ class OrgaosController < ApplicationController
   # GET /orgaos/1/edit
   def edit
     @orgao = Orgao.find(params[:id])
+		(15 - @orgao.links.size).times { 
+			link = @orgao.links.build
+			link.url = 'http://'
+		}
   end
 
   # POST /orgaos
@@ -61,6 +68,10 @@ class OrgaosController < ApplicationController
   # PUT /orgaos/1.json
   def update
     @orgao = Orgao.find(params[:id])
+
+		params[:orgao][:links_attributes].delete_if do |key, link|
+			link[:tipo_link_id].nil? || link[:tipo_link_id].empty? || link[:titulo].nil? || link[:titulo].empty? || link[:url].nil? || link[:url].empty?
+		end
 
     respond_to do |format|
       if @orgao.update_attributes(params[:orgao])

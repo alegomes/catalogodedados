@@ -29,62 +29,47 @@
 		</div>
 		<div class="field">
 		  <%= f.label :url, 'URL do Site Oficial' %><br />
-		  <%= f.text_field :url, :size => '70', :value => 'http://' %>
+		  <%= f.text_field :url, :size => '70' %>
 		</div>
 		<div class="field">
 		  <%= f.label :url_sobre, 'URL da Página Sobre' %><br />
-		  <%= f.text_field :url_sobre, :size => '70', :value => 'http://' %>
+		  <%= f.text_field :url_sobre, :size => '70' %>
 		</div>
 		<div class="field">
 		  <%= f.label :url_competencias, 'URL das Competências' %><br />
-		  <%= f.text_field :url_competencias, :size => '70', :value => 'http://' %>
+		  <%= f.text_field :url_competencias, :size => '70' %>
 		</div>
 		<div class="field">
 		  <%= f.label :url_historico, 'URL do Histórico' %><br />
-		  <%= f.text_field :url_historico, :size => '70', :value => 'http://' %>
+		  <%= f.text_field :url_historico, :size => '70' %>
 		</div>
 		<div class="field">
 		  <%= f.label :url_organograma, 'URL do Organograma' %><br />
-		  <%= f.text_field :url_organograma, :size => '70', :value => 'http://' %>
+		  <%= f.text_field :url_organograma, :size => '70' %>
 		</div>
 		<div class="field">
 		  <%= f.label :url_quem_e_quem, 'URL do Quem é Quem' %><br />
-		  <%= f.text_field :url_quem_e_quem, :size => '70', :value => 'http://' %>
+		  <%= f.text_field :url_quem_e_quem, :size => '70' %>
 		</div>
 	</div>
 	<div class='container'>
-		<h3>Comunicação Externa</h3>
+		<h3>Links</h3>
 		<div class="field">
 			<table width='100%'>
-			<td>Título da Página</td><td>URL</td>
+			<td>Tipo do Link</td><td>Título da Página</td><td>URL</td>
 
 			<%= f.fields_for :links do |l| %>
 			    <tr>
-					<%= l.hidden_field :tipo_link_id, :value => TipoLink.find_by_tipo('Comunicação Externa').id%>
+					<!-- l.hidden_field :tipo_link_id, :value => TipoLink.find_by_tipo('Comunicação Externa').id -->
+					<td><%= l.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo, :include_blank => true) %></td>
 					<td><%= l.text_field :titulo, :size => '50' %></td>
-					<td><%= l.text_field :url, :size => '70', :value => 'http://' %></td>
+					<td><%= l.text_field :url, :size => '70' %></td>
 				</tr>
 			   <% end %>
 			</table>
 		</div>
 	</div>
-	
-	<div class='container'>
-		<h3>Subsites</h3>
-		<div class="field">
-			<table width='100%'>
-			<td>Título da Página</td><td>URL</td>
-			<%= f.fields_for :links do |l| %>
-			    <tr>
-					<%= l.hidden_field :tipo_link_id, :value => TipoLink.find_by_tipo('Subsite').id%>
-					<td><%= l.text_field :titulo, :size => '50' %></td>
-					<td><%= l.text_field :url, :size => '70', :value => 'http://' %></td>
-				</tr>
-			   <% end %>
-			</table>
-		</div>
-	</div>
-	
+		
   <div class="actions">
     <%= f.submit %>
   </div>
