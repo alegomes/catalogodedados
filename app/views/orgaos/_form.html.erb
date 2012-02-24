@@ -3,7 +3,7 @@
 
 	<% if @orgao.errors.any? %>
 	  <div id="error_explanation">
-	    <h2><%= pluralize(@orgao.errors.count, "error") %> prohibited this orgao from being saved:</h2>
+	    <h2><%= pluralize(@orgao.errors.count, "erro") %> ao salvar Órgão:</h2>
 
 	    <ul>
 	    <% @orgao.errors.full_messages.each do |msg| %>
