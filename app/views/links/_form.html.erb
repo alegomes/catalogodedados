@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :orgao %><br />
-    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome) %>
+    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome, :include_blank => true) %>
   </div>
   <div class="field">
     <%= f.label :tipo_link %><br />
-    <%= f.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo) %>
+    <%= f.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo, :include_blank => true) %> (obrigatório)
   </div>
   <div class="field">
     <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
+    <%= f.text_field :titulo %> (obrigatório)
   </div>
   <div class="field">
     <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.text_field :url %> (obrigatório)
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= f.label :orgao, 'Órgão' %><br />
-    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome, {:include_blank => true}) %>
+    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
   </div>
 
   <div class="field">
     <%= f.label :nome, 'Nome' %><br />
-    <%= f.text_field :nome, :size => '70' %>
+    <%= f.text_field :nome, :size => '70' %> (obrigatório)
   </div>
 
   <div class="field">
     <%= f.label :tipo_dataset, 'Tipo do Dataset' %><br />
-    <%= f.collection_select(:tipo_dataset_id, TipoDataset.all, :id, :nome, {:include_blank => true}) %>
+    <%= f.collection_select(:tipo_dataset_id, TipoDataset.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
   </div>
 
   <div class="field">
     <%= f.label :url, 'URL do Dataset' %><br />
-    <%= f.text_field :url, :size => '70' %>
+    <%= f.text_field :url, :size => '70' %> (obrigatório)
   </div>
 
   <div class="field">
@@ -38,17 +38,17 @@
 
   <div class="field">
     <%= f.label :descricao, 'Descrição' %><br />
-    <%= f.text_area :descricao, :size => '50x3' %>
+    <%= f.text_area :descricao, :size => '50x3' %> (obrigatório)
   </div>
 
   <div class="field">
     <%= f.label :formato_dataset, 'Formato' %><br />
-    <%= f.collection_select(:formato_dataset_id, FormatoDataset.all, :id, :nome, {:include_blank => true}) %>
+    <%= f.collection_select(:formato_dataset_id, FormatoDataset.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
   </div>
 
   <div class="field">
     <%= f.label :licenca, 'Licença' %><br />
-    <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %>
+    <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
   </div>
 
   <div class="field">
