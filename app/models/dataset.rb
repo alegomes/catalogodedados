@@ -7,4 +7,6 @@ class Dataset < ActiveRecord::Base
   belongs_to :licenca
   belongs_to :granularidade_temporal
   belongs_to :granularidade_geografica
+
+	validates :orgao, :nome, :descricao, :tipo_dataset, :formato_dataset, :licenca, :url, :presence => true
 end

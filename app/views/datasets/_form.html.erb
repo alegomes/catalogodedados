@@ -1,7 +1,7 @@
 <%= form_for(@dataset) do |f| %>
   <% if @dataset.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@dataset.errors.count, "error") %> prohibited this dataset from being saved:</h2>
+      <h2><%= pluralize(@dataset.errors.count, "erro") %> foram encontrados:</h2>
 
       <ul>
       <% @dataset.errors.full_messages.each do |msg| %>
@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :orgao, 'Órgão' %><br />
-    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome) %>
+    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :tipo_dataset, 'Tipo do Dataset' %><br />
-    <%= f.collection_select(:tipo_dataset_id, TipoDataset.all, :id, :nome) %>
+    <%= f.collection_select(:tipo_dataset_id, TipoDataset.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
@@ -43,12 +43,12 @@
 
   <div class="field">
     <%= f.label :formato_dataset, 'Formato' %><br />
-    <%= f.collection_select(:formato_dataset_id, FormatoDataset.all, :id, :nome) %>
+    <%= f.collection_select(:formato_dataset_id, FormatoDataset.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
     <%= f.label :licenca, 'Licença' %><br />
-    <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome) %>
+    <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
@@ -62,16 +62,16 @@
   </div>
   <div class="field">
     <%= f.label :siorg, 'Código SIORG' %><br />
-    <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome) %>
+    <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) %>
   </div>
   <div class="field">
     <%= f.label :vcge, 'VCGE' %><br />
-    <%= f.collection_select(:vcge_id, Vcge.all, :id, :termo) %>
+    <%= f.collection_select(:vcge_id, Vcge.all, :id, :termo, {:include_blank => true}) %>
   </div>
 
   <div class="field">
     <%= f.label :granularidade_temporal, 'Granularidade Temporal' %><br />
-    <%= f.collection_select(:granularidade_temporal_id, GranularidadeTemporal.all, :id, :nome) %>
+    <%= f.collection_select(:granularidade_temporal_id, GranularidadeTemporal.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
@@ -81,7 +81,7 @@
 
   <div class="field">
     <%= f.label :granularidade_geografica, 'Granularidade Geográfica' %><br />
-    <%= f.collection_select(:granularidade_geografica_id, GranularidadeGeografica.all, :id, :nome) %>
+    <%= f.collection_select(:granularidade_geografica_id, GranularidadeGeografica.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
