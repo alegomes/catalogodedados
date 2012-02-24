@@ -4,4 +4,6 @@ class Orgao < ActiveRecord::Base
   has_many :links
   accepts_nested_attributes_for :links
 	has_many :datasets
+	
+	validates :nome, :url, :siorg, :presence => true
 end

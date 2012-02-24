@@ -17,11 +17,11 @@
 		<h3>Informações Básicas</h3>
 		<div class="field">
 		  <%= f.label :nome %><br />
-		  <%= f.text_field :nome, :size => '70' %>
+		  <%= f.text_field :nome, :size => '70' %> (obrigatório)
 		</div>
 		<div class="field">
 		  <%= f.label :siorg, 'Código SIORG' %><br />
-		  <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome) %>
+		  <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome) %> (obrigatório)
 		</div>
 		<div class="field">
 		  <%= f.label :licenca, 'Licença' %><br />
@@ -29,7 +29,7 @@
 		</div>
 		<div class="field">
 		  <%= f.label :url, 'URL do Site Oficial' %><br />
-		  <%= f.text_field :url, :size => '70' %>
+		  <%= f.text_field :url, :size => '70' %> (obrigatório)
 		</div>
 		<div class="field">
 		  <%= f.label :url_sobre, 'URL da Página Sobre' %><br />
