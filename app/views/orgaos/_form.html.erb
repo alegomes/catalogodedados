@@ -21,11 +21,11 @@
 		</div>
 		<div class="field">
 		  <%= f.label :siorg, 'Código SIORG' %><br />
-		  <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome) %> (obrigatório)
+		  <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
 		</div>
 		<div class="field">
 		  <%= f.label :licenca, 'Licença' %><br />
-		  <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome) %>
+		  <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %>
 		</div>
 		<div class="field">
 		  <%= f.label :url, 'URL do Site Oficial' %><br />
