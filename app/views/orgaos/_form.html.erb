@@ -20,35 +20,35 @@
 		  <%= f.text_field :nome, :size => '70' %> (obrigatório)
 		</div>
 		<div class="field">
-		  <%= f.label :siorg, 'Código SIORG' %><br />
+		  <%= f.label :siorg %><br />
 		  <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
 		</div>
 		<div class="field">
-		  <%= f.label :licenca, 'Licença' %><br />
+		  <%= f.label :licenca %><br />
 		  <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %>
 		</div>
 		<div class="field">
-		  <%= f.label :url, 'URL do Site Oficial' %><br />
+		  <%= f.label :url %><br />
 		  <%= f.text_field :url, :size => '70' %> (obrigatório)
 		</div>
 		<div class="field">
-		  <%= f.label :url_sobre, 'URL da Página Sobre' %><br />
+		  <%= f.label :url_sobre %><br />
 		  <%= f.text_field :url_sobre, :size => '70' %>
 		</div>
 		<div class="field">
-		  <%= f.label :url_competencias, 'URL das Competências' %><br />
+		  <%= f.label :url_competencias %><br />
 		  <%= f.text_field :url_competencias, :size => '70' %>
 		</div>
 		<div class="field">
-		  <%= f.label :url_historico, 'URL do Histórico' %><br />
+		  <%= f.label :url_historico %><br />
 		  <%= f.text_field :url_historico, :size => '70' %>
 		</div>
 		<div class="field">
-		  <%= f.label :url_organograma, 'URL do Organograma' %><br />
+		  <%= f.label :url_organograma %><br />
 		  <%= f.text_field :url_organograma, :size => '70' %>
 		</div>
 		<div class="field">
-		  <%= f.label :url_quem_e_quem, 'URL do Quem é Quem' %><br />
+		  <%= f.label :url_quem_e_quem %><br />
 		  <%= f.text_field :url_quem_e_quem, :size => '70' %>
 		</div>
 	</div>
