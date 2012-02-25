@@ -25,7 +25,7 @@ class OrgaosController < ApplicationController
   # GET /orgaos/new.json
   def new
     @orgao = Orgao.new
-		15.times { 
+		1.times { 
 			link = @orgao.links.build 
 			link.url = 'http://'
 		}
@@ -49,19 +49,29 @@ class OrgaosController < ApplicationController
   # POST /orgaos.json
   def create
     @orgao = Orgao.new(params[:orgao])
-		@orgao.links.delete_if do |link|
-			(link.titulo.nil? || link.titulo.empty? || link.url.nil? || link.url.empty?)
-		end
 
-    respond_to do |format|
-      if @orgao.save
-        format.html { redirect_to @orgao, notice: 'Orgao was successfully created.' }
-        format.json { render json: @orgao, status: :created, location: @orgao }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @orgao.errors, status: :unprocessable_entity }
-      end
-    end
+		if params[:add_link]
+			link = @orgao.links.build
+			link.url = 'http://'
+	    render :action => 'new_link'
+		else
+
+			@orgao.links.delete_if do |link|
+				(link.titulo.nil? || link.titulo.empty? || link.url.nil? || link.url.empty?)
+			end
+
+	    respond_to do |format|
+	      if @orgao.save
+	        format.html { redirect_to @orgao, notice: 'Orgao criado com sucesso.' }
+	        format.json { render json: @orgao, status: :created, location: @orgao }
+	      else
+	        format.html { render action: "new" }
+	        format.json { render json: @orgao.errors, status: :unprocessable_entity }
+	      end
+	    end
+
+		end # if add_link
+
   end
 
   # PUT /orgaos/1

@@ -1,0 +1,17 @@
+<table>
+	<% if not @orgao.links.empty? %>
+		<tr>
+			<th>Tipo do Link</th>
+			<th>Título da Página</th>
+			<th>URL</th>
+		</tr>
+	<% end %>
+	<%= f.fields_for :links do |l| %>
+	    <tr>
+			<!-- l.hidden_field :tipo_link_id, :value => TipoLink.find_by_tipo('Comunicação Externa').id -->
+			<td><%= l.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo, :include_blank => true) %></td>
+			<td><%= l.text_field :titulo, :size => '50' %></td>
+			<td><%= l.text_field :url, :size => '70' %></td>
+		</tr>
+	<% end %>
+</table>
