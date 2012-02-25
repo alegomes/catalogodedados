@@ -49,8 +49,7 @@ pt-BR:
                 cobertura_temporal: "Cobertura Temporal"
                 granularidade_geografica: "Granularidade Geográfica"
                 cobertura_geografica: "Cobertura Geográfica"
-                data_criacao: "Data de Criação"
-                data_disponibilizacao: "Data de Disponibilização"
+                data_atualizacao: "Data da Última Atualização"
                 
             tipo_dataset:
                 nome: "Nome"

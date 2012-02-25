@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218180234) do
+ActiveRecord::Schema.define(:version => 20120225140612) do
 
   create_table "datasets", :force => true do |t|
     t.string   "nome"
@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(:version => 20120218180234) do
     t.string   "url_documentacao"
     t.string   "cobertura_temporal"
     t.string   "cobertura_geografica"
-    t.date     "data_criacao"
-    t.date     "data_disponibilizacao"
     t.string   "origem"
     t.integer  "orgao_id"
     t.integer  "siorg_id"
@@ -34,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20120218180234) do
     t.integer  "licenca_id"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
+    t.date     "data_atualizacao"
   end
 
   add_index "datasets", ["formato_dataset_id"], :name => "index_datasets_on_formato_dataset_id"
