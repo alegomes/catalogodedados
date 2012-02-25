@@ -1,7 +1,7 @@
 <%= form_for(@tipo_link) do |f| %>
   <% if @tipo_link.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tipo_link.errors.count, "error") %> prohibited this tipo_link from being saved:</h2>
+      <h2><%= pluralize(@tipo_link.errors.count, "error") %> foram encontrados:</h2>
 
       <ul>
       <% @tipo_link.errors.full_messages.each do |msg| %>

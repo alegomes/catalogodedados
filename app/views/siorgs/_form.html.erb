@@ -1,7 +1,7 @@
 <%= form_for(@siorg) do |f| %>
   <% if @siorg.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@siorg.errors.count, "error") %> prohibited this siorg from being saved:</h2>
+      <h2><%= pluralize(@siorg.errors.count, "error") %> foram encontrados:</h2>
 
       <ul>
       <% @siorg.errors.full_messages.each do |msg| %>

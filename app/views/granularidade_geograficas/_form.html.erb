@@ -1,7 +1,7 @@
 <%= form_for(@granularidade_geografica) do |f| %>
   <% if @granularidade_geografica.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@granularidade_geografica.errors.count, "error") %> prohibited this granularidade_geografica from being saved:</h2>
+      <h2><%= pluralize(@granularidade_geografica.errors.count, "error") %> foram encontrados:</h2>
 
       <ul>
       <% @granularidade_geografica.errors.full_messages.each do |msg| %>

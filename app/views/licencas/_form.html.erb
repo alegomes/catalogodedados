@@ -1,7 +1,7 @@
 <%= form_for(@licenca) do |f| %>
   <% if @licenca.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@licenca.errors.count, "error") %> prohibited this licenca from being saved:</h2>
+      <h2><%= pluralize(@licenca.errors.count, "error") %> foram encontrados:</h2>
 
       <ul>
       <% @licenca.errors.full_messages.each do |msg| %>

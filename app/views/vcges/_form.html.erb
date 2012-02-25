@@ -1,7 +1,7 @@
 <%= form_for(@vcge) do |f| %>
   <% if @vcge.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@vcge.errors.count, "error") %> prohibited this vcge from being saved:</h2>
+      <h2><%= pluralize(@vcge.errors.count, "error") %> foram encontrados:</h2>
 
       <ul>
       <% @vcge.errors.full_messages.each do |msg| %>
