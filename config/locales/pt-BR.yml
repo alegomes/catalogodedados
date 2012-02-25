@@ -39,6 +39,7 @@ pt-BR:
                 url: "URL do Dataset"
                 url_documentacao: "URL da Documentação"
                 descricao: "Descrição"
+                comentario: "Comentário"
                 formato_dataset: "Formato"
                 licenca: "Licença"
                 guarda: "Nome do órgão que detém a guarda dos dados"

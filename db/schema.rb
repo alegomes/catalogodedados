@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225140612) do
+ActiveRecord::Schema.define(:version => 20120225143800) do
 
   create_table "datasets", :force => true do |t|
     t.string   "nome"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20120225140612) do
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.date     "data_atualizacao"
+    t.string   "comentario"
   end
 
   add_index "datasets", ["formato_dataset_id"], :name => "index_datasets_on_formato_dataset_id"
