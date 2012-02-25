@@ -51,12 +51,22 @@
 <div class='container'>
 	<h3>Links</h3>
 	<table class='border' width='70%'>
-		<tr><th>Tipo do Link</th><th>Título da Página</th><th>URL</th></tr>
+		<tr>
+			<th>Tipo do Link</th>
+			<th>Título da Página</th>
+			<th>URL</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
 		<% @orgao.links.each do |link| %>
 			<tr class='border'>
 				<td class='border' width='30%'><%= link.tipo_link.tipo %></td>
 				<td class='border' width='40%'><%= link.titulo %></td>
 				<td class='border' width='30%'><%= link.url %></td>
+				<td><%= link_to 'Detalhar', link %></td>
+			    <td><%= link_to 'Editar', edit_link_path(link) %></td>
+			    <td><%= link_to 'Apagar', link, confirm: 'Certeza?', method: :delete %></td>
 			</tr>
 		<% end %>
 	</table>
@@ -68,12 +78,21 @@
 		<% if @orgao.datasets.empty? %>
 			Nenhum dataset cadastrado.<p/>
 		<% else %>
-			<tr><th>Nome</th><th>Formato</th></tr>
+			<tr>
+				<th>Nome</th>
+				<th>Formato</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
 		<% end %>
 		<% @orgao.datasets.each do |dataset| %>
 			<tr class='border'>
 				<td class='border' width='30%'><%= dataset.nome %></td>
 				<td class='border' width='40%'><%= dataset.formato_dataset.nome %></td>
+				<td align='center'><%= link_to 'Detalhar', dataset %></td>
+			    <td align='center'><%= link_to 'Editar', edit_dataset_path(dataset) %></td>
+			    <td align='center'><%= link_to 'Apagar', dataset, confirm: 'Certeza?', method: :delete %>
 			</tr>
 		<% end %>
 	</table>
