@@ -65,6 +65,9 @@
 					<tr><td colspan='3'><center>Nenhum link cadastrado.</center></td></tr>
 				<% end %>
 				<!-- %= render 'links', :f => f % -->
+				<%= f.fields_for :links do |l| %>
+				    <%= render "links", :f => l %>
+				<% end %>
 			</table>
 			<%= link_to 'Novo Link', :action => :new_link, :remote => true %>
 			<%= link_to_add_links '+', f, :links %>

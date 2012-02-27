@@ -39,10 +39,6 @@ class OrgaosController < ApplicationController
   # GET /orgaos/1/edit
   def edit
     @orgao = Orgao.find(params[:id])
-		(15 - @orgao.links.size).times { 
-			link = @orgao.links.build
-			link.url = 'http://'
-		}
   end
 
 #	def new_link
