@@ -1,7 +1,5 @@
 <tr>
-	<!-- l.hidden_field :tipo_link_id, :value => TipoLink.find_by_tipo('Comunicação Externa').id -->
-	<td><%= f.collection_select(:tipo_link_id, TipoLink.all, :id, :tipo, :include_blank => true) %></td>
-	<td><%= f.text_field :titulo, :size => '20' %></td>
-	<td><%= f.text_field :url, :size => '50' %></td>
+	<td><%= f.text_field :titulo, :size => '30' %></td>
+	<td><%= f.text_field :url, :size => '70' %></td>
 	<td><%= link_to_remove_fields "-", f %></td>
 </tr>

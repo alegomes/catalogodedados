@@ -12,8 +12,6 @@ Catalogodedados::Application.routes.draw do
   resources :vcges
 
 
-  resources :tipo_links
-
   resources :granularidade_geograficas
 
   resources :granularidade_temporals
