@@ -25,10 +25,10 @@ class OrgaosController < ApplicationController
   # GET /orgaos/new.json
   def new
     @orgao = Orgao.new
-		1.times { 
-			link = @orgao.links.build 
-			link.url = 'http://'
-		}
+#		1.times { 
+#			link = @orgao.links.build 
+#			link.url = 'http://'
+#		}
 
     respond_to do |format|
       format.html # new.html.erb
@@ -45,20 +45,28 @@ class OrgaosController < ApplicationController
 		}
   end
 
+#	def new_link
+#		@orgao = Orgao.new(params[:orgao])
+#   
+#		link = @orgao.links.build
+#		link.url = 'http://'
+#   render :partial => 'links'
+#	end
+
   # POST /orgaos
   # POST /orgaos.json
   def create
     @orgao = Orgao.new(params[:orgao])
 
-		if params[:add_link]
-			link = @orgao.links.build
-			link.url = 'http://'
-	    render :action => 'new_link'
-		else
+#		if params[:add_link]
+#			link = @orgao.links.build
+#			link.url = 'http://'
+#	    render :action => 'new_link'
+#		else
 
-			@orgao.links.delete_if do |link|
-				(link.titulo.nil? || link.titulo.empty? || link.url.nil? || link.url.empty?)
-			end
+#			@orgao.links.delete_if do |link|
+#				(link.titulo.nil? || link.titulo.empty? || link.url.nil? || link.url.empty?)
+#			end
 
 	    respond_to do |format|
 	      if @orgao.save
@@ -70,7 +78,7 @@ class OrgaosController < ApplicationController
 	      end
 	    end
 
-		end # if add_link
+#		end # if add_link
 
   end
 

@@ -4,11 +4,13 @@ Catalogodedados::Application.routes.draw do
 
   resources :datasets
 
-  resources :orgaos
+  resources :orgaos do
+		get 'new_link', :on => :collection
+	  resources :links 
+	end
 
   resources :vcges
 
-  resources :links
 
   resources :tipo_links
 

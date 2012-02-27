@@ -55,18 +55,18 @@
 			<th>Tipo do Link</th>
 			<th>Título da Página</th>
 			<th>URL</th>
+			<!--th></th>
 			<th></th>
-			<th></th>
-			<th></th>
+			<th></th -->
 		</tr>
 		<% @orgao.links.each do |link| %>
 			<tr class='border'>
 				<td class='border' width='30%'><%= link.tipo_link.tipo %></td>
 				<td class='border' width='40%'><%= link.titulo %></td>
 				<td class='border' width='30%'><%= link.url %></td>
-				<td><%= link_to 'Detalhar', link %></td>
-			    <td><%= link_to 'Editar', edit_link_path(link) %></td>
-			    <td><%= link_to 'Apagar', link, confirm: 'Certeza?', method: :delete %></td>
+				<!-- td>< %= link_to 'Detalhar', link % ></td>
+			    <td>< %= link_to 'Editar', edit_link_path(link) %></td>
+			    <td>< %= link_to 'Apagar', link, confirm: 'Certeza?', method: :delete % ></td -->
 			</tr>
 		<% end %>
 	</table>

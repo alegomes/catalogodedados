@@ -55,8 +55,19 @@
 	<div class='container'>
 		<h3>Links</h3>
 		<div class="field">
-			<%= render 'links', :orgao => @orgao, :f => f %>
-			<%= f.submit 'Novo Link', :name => 'add_link', :remote => true %>
+			<table>
+				<tr>
+					<th>Tipo do Link</th>
+					<th>Título da Página</th>
+					<th>URL</th>
+				</tr>
+				<% if @orgao.links.empty? %>
+					<tr><td colspan='3'><center>Nenhum link cadastrado.</center></td></tr>
+				<% end %>
+				<!-- %= render 'links', :f => f % -->
+			</table>
+			<%= link_to 'Novo Link', :action => :new_link, :remote => true %>
+			<%= link_to_add_links '+', f, :links %>
 		</div>
 	</div>
 		
