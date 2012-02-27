@@ -8,5 +8,5 @@ class Orgao < ActiveRecord::Base
 		:allow_destroy => true,
 	  :reject_if     => :all_blank
 
-	validates :nome, :url, :siorg, :presence => true
+	validates :nome, :url, :licenca, :siorg, :presence => true
 end

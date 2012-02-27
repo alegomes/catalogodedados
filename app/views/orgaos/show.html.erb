@@ -51,23 +51,21 @@
 <div class='container'>
 	<h3>Links</h3>
 	<table class='border' width='70%'>
-		<tr>
-			<th>Tipo do Link</th>
-			<th>Título da Página</th>
-			<th>URL</th>
-			<!--th></th>
-			<th></th>
-			<th></th -->
-		</tr>
-		<% @orgao.links.each do |link| %>
-			<tr class='border'>
-				<td class='border' width='30%'><%= link.tipo_link.tipo %></td>
-				<td class='border' width='40%'><%= link.titulo %></td>
-				<td class='border' width='30%'><%= link.url %></td>
-				<!-- td>< %= link_to 'Detalhar', link % ></td>
-			    <td>< %= link_to 'Editar', edit_link_path(link) %></td>
-			    <td>< %= link_to 'Apagar', link, confirm: 'Certeza?', method: :delete % ></td -->
+		<% if @orgao.links.empty? %>
+			Nenhum link cadastrado.<p/>
+		<% else %>
+			<tr>
+				<th>Tipo do Link</th>
+				<th>Título da Página</th>
+				<th>URL</th>
 			</tr>
+			<% @orgao.links.each do |link| %>
+				<tr class='border'>
+					<td class='border' width='30%'><%= link.tipo_link.tipo %></td>
+					<td class='border' width='40%'><%= link.titulo %></td>
+					<td class='border' width='30%'><%= link.url %></td>
+				</tr>
+			<% end %>
 		<% end %>
 	</table>
 	</p>
@@ -96,7 +94,6 @@
 			</tr>
 		<% end %>
 	</table>
-	<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
 </div>
 
 <%= link_to 'Editar', edit_orgao_path(@orgao) %> |

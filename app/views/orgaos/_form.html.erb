@@ -25,7 +25,7 @@
 		</div>
 		<div class="field">
 		  <%= f.label :licenca %><br />
-		  <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %>
+		  <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
 		</div>
 		<div class="field">
 		  <%= f.label :url %><br />
@@ -61,19 +61,17 @@
 					<th>Título da Página</th>
 					<th>URL</th>
 				</tr>
-				<% if @orgao.links.empty? %>
-					<tr><td colspan='3'><center>Nenhum link cadastrado.</center></td></tr>
-				<% end %>
-				<!-- %= render 'links', :f => f % -->
 				<%= f.fields_for :links do |l| %>
 				    <%= render "links", :f => l %>
 				<% end %>
 			</table>
-			<!--  %= link_to 'Novo Link', :action => :new_link, :remote => true % -->
 			<%= link_to_add_links 'Novo Link', f, :links %>
 		</div>
 	</div>
-		
+	<div class='container'>
+		<h3>Datasets</h3>
+		<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
+	</div>	
   <div class="actions">
     <%= f.submit "Salvar" %>
   </div>
