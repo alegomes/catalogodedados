@@ -74,7 +74,14 @@ pt-BR:
                 uri: "URI"
                 
             siorg:
+                codigo_pai: "Código do Pai"
+                codigo: "Código"
+                nome: "Nome"
                 
+    will_paginate:
+        previous_label: '<'
+        page_gap: '...'
+        next_label: ">"
 
     date:
         abbr_day_names:
@@ -275,3 +282,4 @@ pt-BR:
           long: ! '%A, %d de %B de %Y, %H:%M h'
           short: ! '%d/%m, %H:%M h'
         pm: ''
+

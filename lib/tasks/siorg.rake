@@ -20,7 +20,8 @@ namespace :siorg do
 		destination = Dir.tmpdir
 		zip = 'db/dump/Estrutura_Organizacional.zip'
 		
-		# Como extrair isso?
+		# TODO Como extrair isso?
+		# Codigo extraido de http://www.markhneedham.com/blog/2008/10/02/ruby-unzipping-a-file-using-rubyzip/
 		puts "Descompactando arquivo #{zip} em #{destination}..."
 		Zip::ZipFile.open(zip) { |zip_file|
 	   zip_file.each { |f|

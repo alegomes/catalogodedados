@@ -12,13 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+    <%= f.label :codigo_pai %><br />
+    <%= f.text_field :codigo_pai %>
   </div>
+
   <div class="field">
     <%= f.label :codigo %><br />
     <%= f.text_field :codigo %>
   </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome, :size => 70 %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

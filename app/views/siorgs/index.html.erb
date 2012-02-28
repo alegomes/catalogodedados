@@ -2,8 +2,9 @@
 
 <table>
   <tr>
-    <th>Nome</th>
+    <th>Código do Pai</th>
     <th>Código</th>
+    <th>Nome</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,14 +12,16 @@
 
 <% @siorgs.each do |siorg| %>
   <tr>
-    <td><%= siorg.nome %></td>
+    <td><%= siorg.codigo_pai %></td>
     <td><%= siorg.codigo %></td>
+    <td><%= siorg.nome %></td>
     <td><%= link_to 'Show', siorg %></td>
     <td><%= link_to 'Edit', edit_siorg_path(siorg) %></td>
     <td><%= link_to 'Destroy', siorg, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
+<%= will_paginate @siorgs %>
 
 <br />
 

@@ -44,3 +44,4 @@ end
 gem 'nokogiri'
 gem 'zip'
 gem 'tempdir'
+gem 'will_paginate', '~> 3.0'

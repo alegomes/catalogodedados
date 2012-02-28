@@ -2,7 +2,8 @@ class SiorgsController < ApplicationController
   # GET /siorgs
   # GET /siorgs.json
   def index
-    @siorgs = Siorg.all
+    #@siorgs = Siorg.all
+		@siorgs = Siorg.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

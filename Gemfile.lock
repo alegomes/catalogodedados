@@ -114,6 +114,7 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    will_paginate (3.0.3)
     zip (2.0.2)
 
 PLATFORMS
@@ -129,4 +130,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   tempdir
   uglifier (>= 1.0.3)
+  will_paginate (~> 3.0)
   zip

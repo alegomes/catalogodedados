@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Nome:</b>
-  <%= @siorg.nome %>
+  <b>Codigo do Pai:</b>
+  <%= @siorg.codigo_pai %>
 </p>
 
 <p>
@@ -10,6 +10,13 @@
   <%= @siorg.codigo %>
 </p>
 
+<p>
+  <b>Nome:</b>
+  <%= @siorg.nome %>
+</p>
 
-<%= link_to 'Edit', edit_siorg_path(@siorg) %> |
-<%= link_to 'Back', siorgs_path %>
+
+
+
+<%= link_to 'Editar', edit_siorg_path(@siorg) %> |
+<%= link_to 'Voltar', siorgs_path %>
