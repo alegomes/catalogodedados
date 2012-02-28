@@ -1,4 +1,5 @@
 require 'rexml/document'
+require 'zip/zip'
 
 namespace :siorg do
 
@@ -15,7 +16,22 @@ namespace :siorg do
 	
 	desc 'Carrega a tabela de codigos SIORG a partir do XML de Estruturas Organizacionais Governamentais do Poder Executivo Federal disponivel em http://beta.dados.gov.br/dados/dataset/siorg'
 	task :populate => :environment do
-		file = ENV['XML']
+		
+		destination = Dir.tmpdir
+		zip = 'db/dump/Estrutura_Organizacional.zip'
+		
+		# Como extrair isso?
+		puts "Descompactando arquivo #{zip} em #{destination}..."
+		Zip::ZipFile.open(zip) { |zip_file|
+	   zip_file.each { |f|
+	     f_path=File.join(destination, f.name)
+	     FileUtils.mkdir_p(File.dirname(f_path))
+	     zip_file.extract(f, f_path) unless File.exist?(f_path)
+	   }
+	  }
+		
+		file = File.join(destination,'Estrutura_Organizacional.xml') #ENV['XML']
+		puts "Processando #{file}..."
 		reader = Nokogiri::XML::Reader(File.open(file))
 		
 		inside_orgao = false

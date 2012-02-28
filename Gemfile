@@ -42,3 +42,5 @@ group :test, :development do
 end
 
 gem 'nokogiri'
+gem 'zip'
+gem 'tempdir'
