@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228000804) do
+ActiveRecord::Schema.define(:version => 20120228221349) do
 
   create_table "datasets", :force => true do |t|
     t.string   "nome"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20120228000804) do
     t.string   "codigo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "codigo_pai"
   end
 
   create_table "tipo_datasets", :force => true do |t|

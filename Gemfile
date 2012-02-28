@@ -40,3 +40,5 @@ gem 'jquery-rails'
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
 end
+
+gem 'nokogiri'
