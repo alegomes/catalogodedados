@@ -54,6 +54,9 @@
 <p>
   <b>VCGEs</b>
   <ul>
+	  <% if @dataset.vcges.empty? %>
+	     <li>Nenhum termo VCGE associado</li>
+	  <% end %>
 	  <% @dataset.vcges.each do |vcge| %>
 		<li><%= vcge.uri %></li>
 	  <% end %>
