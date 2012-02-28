@@ -69,14 +69,23 @@
     <%= f.label :siorg %><br />
     <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) %>
   </div>
-  <div class="field">
-    <%= f.label :vcge %><br />
-    <%= f.collection_select(:vcge_id, Vcge.all, :id, :termo, {:include_blank => true}) %>
+
+  <div class='container'>
+	<h3>Termos VCGE</h3>
+	<div class="field">
+		<table>
+			<%= f.fields_for :vcges do |v| %>
+			    <%= render "vcges", :f => v %>
+			<% end %>
+		</table>
+		<%= link_to_add_links 'Outro Termo VCGE', f, :vcges %>
+	</div>
   </div>
+
 
   <div class="field">
     <%= f.label :granularidade_temporal %><br />
-    <%= f.collection_select(:granularidade_temporal_id, GranularidadeTemporal.all, :id, :nome, {:include_blank => true}) %>
+    <%= f.collection_select(:granularidade_temporal_id, GranularidadeTemporal.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
   </div>
 
   <div class="field">
@@ -86,7 +95,7 @@
 
   <div class="field">
     <%= f.label :granularidade_geografica %><br />
-    <%= f.collection_select(:granularidade_geografica_id, GranularidadeGeografica.all, :id, :nome, {:include_blank => true}) %>
+    <%= f.collection_select(:granularidade_geografica_id, GranularidadeGeografica.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
   </div>
 
   <div class="field">

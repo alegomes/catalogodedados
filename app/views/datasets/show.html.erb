@@ -52,8 +52,13 @@
 </p>
 
 <p>
-  <b>Vcge:</b>
-  <%= @dataset.vcge.termo %>
+  <b>VCGEs</b>
+  <ul>
+	  <% @dataset.vcges.each do |vcge| %>
+		<li><%= vcge.uri %></li>
+	  <% end %>
+  </ul>
+
 </p>
 
 <p>

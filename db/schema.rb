@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120227234352) do
+ActiveRecord::Schema.define(:version => 20120228000804) do
 
   create_table "datasets", :force => true do |t|
     t.string   "nome"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(:version => 20120227234352) do
   add_index "datasets", ["siorg_id"], :name => "index_datasets_on_siorg_id"
   add_index "datasets", ["tipo_dataset_id"], :name => "index_datasets_on_tipo_dataset_id"
   add_index "datasets", ["vcge_id"], :name => "index_datasets_on_vcge_id"
+
+  create_table "datasets_vcges", :id => false, :force => true do |t|
+    t.integer "dataset_id"
+    t.integer "vcge_id"
+  end
+
+  add_index "datasets_vcges", ["dataset_id"], :name => "index_datasets_vcges_on_dataset_id"
+  add_index "datasets_vcges", ["vcge_id"], :name => "index_datasets_vcges_on_vcge_id"
 
   create_table "formato_datasets", :force => true do |t|
     t.string   "nome"

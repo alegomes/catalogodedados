@@ -5,6 +5,15 @@
   <%= @vcge.uri %>
 </p>
 
+<p>
+	<b>Datasets que fazem referência a este VCGE</b>
+	<ul>
+		<% @vcge.datasets.each do |dataset| %>
+		<li><%= dataset.orgao.nome %> - <%= dataset.nome %></li>
+		<% end %>
+	</ul>
+</p>
+
 
 <%= link_to 'Editar', edit_vcge_path(@vcge) %> |
 <%= link_to 'Voltar', vcges_path %>

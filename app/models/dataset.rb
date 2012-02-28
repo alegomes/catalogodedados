@@ -8,6 +8,10 @@ class Dataset < ActiveRecord::Base
   belongs_to :granularidade_geografica
   has_and_belongs_to_many :vcges
 
+  accepts_nested_attributes_for :vcges,
+		:allow_destroy => true,
+	  :reject_if     => :all_blank
+
 	validates :orgao, :nome, :descricao, :tipo_dataset, :formato_dataset, 
 						:licenca, :url, :granularidade_temporal, :granularidade_geografica, 
 						:presence => true

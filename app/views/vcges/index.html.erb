@@ -3,14 +3,16 @@
 <table class='border'>
   <tr>
     <th>URI</th>
+    <th>Datatasets</th>
     <th></th>
     <th></th>
-    <th></th>
+	<th></th>
   </tr>
 
 <% @vcges.each do |vcge| %>
   <tr>
     <td><%= vcge.uri %></td>
+	<td align='center'><%= vcge.datasets.size %></td>
     <td><%= link_to 'Detalhar', vcge %></td>
     <td><%= link_to 'Editar', edit_vcge_path(vcge) %></td>
     <td><%= link_to 'Remover', vcge, confirm: 'Certeza?', method: :delete %></td>
