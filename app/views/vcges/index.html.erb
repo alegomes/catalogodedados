@@ -2,8 +2,7 @@
 
 <table class='border'>
   <tr>
-    <th>Termo Pai</th>
-    <th>Termo</th>
+    <th>URI</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,11 +10,10 @@
 
 <% @vcges.each do |vcge| %>
   <tr>
-    <td><%= vcge.termo_pai.termo if vcge.termo_pai %></td>
-    <td><%= vcge.termo %></td>
-    <td><%= link_to 'Show', vcge %></td>
-    <td><%= link_to 'Edit', edit_vcge_path(vcge) %></td>
-    <td><%= link_to 'Destroy', vcge, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= vcge.uri %></td>
+    <td><%= link_to 'Detalhar', vcge %></td>
+    <td><%= link_to 'Editar', edit_vcge_path(vcge) %></td>
+    <td><%= link_to 'Remover', vcge, confirm: 'Certeza?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

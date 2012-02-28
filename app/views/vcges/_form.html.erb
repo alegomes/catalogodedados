@@ -12,15 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :termo_pai %><br />
-	<% vcges = Vcge.all
-	   vcges.delete(@vcge) 
-	%>
-    <%= f.collection_select(:termo_pai_id, vcges, :id, :termo) %>
-  </div>
-  <div class="field">
-    <%= f.label :termo %><br />
-    <%= f.text_field :termo %>
+    <%= f.label :uri %><br />
+    <%= f.text_field :uri %>
   </div>
   <div class="actions">
     <%= f.submit %>

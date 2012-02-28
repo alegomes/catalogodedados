@@ -10,7 +10,6 @@ pt-BR:
             tipo_dataset: "Tipo de Dataset"
             formato_dataset: "Formato de Dataset"
             link: "Link"
-            tipo_link: "Tipo de Link"
             licenca: "Licença"
             granularidade_temporal: "Granularidade Temporal"
             granularidade_geografica: "Granularidade Geográfica"
@@ -26,11 +25,6 @@ pt-BR:
                 url: "URL"
                 siorg: "Código SIORG"
                 licenca: "Licença"
-                url_sobre: "URL da Página Sobre"
-                url_competencias: "URL das Competências"
-                url_historico: "URL do Histórico"
-                url_organograma: "URL do Organograma"
-                url_quem_e_quem: "URL do Quem é Quem"
 
             dataset:
                 orgao: "Órgão"
@@ -60,7 +54,6 @@ pt-BR:
                 
             link:
                 orgao: "Órgão"
-                tipo_link: "Tipo do Link"
                 titulo: "Título da Página"
                 url: "URL"
                 
@@ -78,6 +71,7 @@ pt-BR:
                 nome: "Nome"
                 
             vcge:
+                uri: "URI"
                 
             siorg:
                 

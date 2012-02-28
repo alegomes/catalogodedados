@@ -1,15 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Termo pai:</b>
-  <%= @vcge.termo_pai.termo if @vcge.termo_pai %>
-</p>
-
-<p>
-  <b>Termo:</b>
-  <%= @vcge.termo %>
+  <b>URI:</b>
+  <%= @vcge.uri %>
 </p>
 
 
-<%= link_to 'Edit', edit_vcge_path(@vcge) %> |
-<%= link_to 'Back', vcges_path %>
+<%= link_to 'Editar', edit_vcge_path(@vcge) %> |
+<%= link_to 'Voltar', vcges_path %>
