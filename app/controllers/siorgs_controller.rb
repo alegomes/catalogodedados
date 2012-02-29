@@ -81,4 +81,12 @@ class SiorgsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def search
+		puts "params=#{params}"
+		codigo_siorg=params[:codigo_siorg]
+		@siorg = Siorg.find_by_codigo(codigo_siorg)
+		
+		render 'search.js.erb'
+	end
 end

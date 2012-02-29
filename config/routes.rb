@@ -22,7 +22,9 @@ Catalogodedados::Application.routes.draw do
 
   resources :licencas
 
-  resources :siorgs
+  resources :siorgs do
+		get 'search', :on => :collection
+	end
 
 
   # The priority is based upon order of creation:
