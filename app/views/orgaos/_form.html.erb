@@ -20,9 +20,11 @@
 		  <%= f.text_field :nome, :size => '70' %> (obrigatório)
 		</div>
 		<div class="field">
-			<%= f.label :siorg %><br />
-		  	<%= text_field_tag :codigo_siorg, '',  :id => 'codigo_siorg_field' %>
-		    <span id='nome_siorg'></span>			
+			<%= f.label :siorg %>
+			<%= hidden_field_tag :id_siorg_field, @orgao.siorg.id %><br />
+			
+		  	<%= text_field_tag :codigo_siorg, @orgao.siorg.codigo,  :id => 'codigo_siorg_field' %>
+		    <span id='nome_siorg'><%= @orgao.siorg.nome %></span>			
 		</div>
 		<div class="field">
 		  <%= f.label :licenca %><br />

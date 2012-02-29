@@ -5,6 +5,7 @@
 var orgao = {
 	
 	buscaSiorg: function(field) {
+		$('#nome_siorg').html('...');
 		$.ajax({
 			url: '/siorgs/search',
 			data: 'codigo_siorg=' + field.val()

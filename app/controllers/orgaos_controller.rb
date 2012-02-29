@@ -20,6 +20,7 @@ class OrgaosController < ApplicationController
 
   def new
     @orgao = Orgao.new
+		@orgao.siorg = Siorg.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -32,7 +33,8 @@ class OrgaosController < ApplicationController
   end
 
   def create
-    @orgao = Orgao.new(params[:orgao])
+		@orgao = Orgao.new(params[:orgao])
+		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) 
 
     respond_to do |format|
       if @orgao.save
@@ -50,6 +52,7 @@ class OrgaosController < ApplicationController
   # PUT /orgaos/1.json
   def update
     @orgao = Orgao.find(params[:id])
+		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) 
 
     respond_to do |format|
       if @orgao.update_attributes(params[:orgao])

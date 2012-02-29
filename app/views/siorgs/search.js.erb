@@ -1,4 +1,5 @@
 <%
 	texto = @siorg.nil? ? 'Código não encontrado' : @siorg.nome
 %>
+$('#id_siorg_field').val('<%= @siorg.id %>')
 $('#nome_siorg').html('<%= texto %>');
