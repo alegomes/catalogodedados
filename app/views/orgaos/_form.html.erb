@@ -20,11 +20,19 @@
 		  <%= f.text_field :nome, :size => '70' %> (obrigatório)
 		</div>
 		<div class="field">
-			<%= f.label :siorg %>
-			<%= hidden_field_tag :id_siorg_field, @orgao.siorg.id %><br />
+			<table>
+				<tr class='top'>
+				<td>
+					<%= f.label :siorg %>
+					<%= hidden_field_tag :id_siorg_field, @orgao.siorg.id %><br />
 			
-		  	<%= text_field_tag :codigo_siorg, @orgao.siorg.codigo,  :id => 'codigo_siorg_field' %>
-		    <span id='nome_siorg'><%= @orgao.siorg.nome %></span>			
+				  	<%= text_field_tag :codigo_siorg, @orgao.siorg.codigo,  :id => 'codigo_siorg_field' %>
+				</td>
+				<td class='small'>
+				    <span id='nome_siorg'><%= @orgao.siorg.nome %></span>
+				</td>
+				</tr>
+			</table>
 		</div>
 		<div class="field">
 		  <%= f.label :licenca %><br />

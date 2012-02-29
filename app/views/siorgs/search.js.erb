@@ -1,6 +1,16 @@
 <%
 	id = @siorg.nil? ? '' : @siorg.id
-	texto = @siorg.nil? ? 'Código não encontrado' : @siorg.nome
+	texto = ''
+	
+	if @siorg.nil? 
+		texto = 'Código não encontrado'
+	else
+		nivel = '-'
+		@siorg.hierarquia.each do |siorg|
+			texto << "#{nivel} #{siorg}<br/>" 
+			nivel << '-'
+		end
+	end
 %>
-$('#id_siorg_field').val('<%= id %>')
-$('#nome_siorg').html('<%= texto %>');
+$('#id_siorg_field').val('<%= id %>');
+$('#nome_siorg').html('<%= texto.html_safe %>');

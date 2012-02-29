@@ -37,11 +37,17 @@ h1 {
 table {
 	width: 100%;
 }
-table.border {
+.border {
 	border-collapse: collapse;
 }
-table.border th,td {
+.border th td {
 	border: 1px solid black
+}
+.top {
+	vertical-align: text-top;
+}
+.small {
+	font-size: 50%;
 }
 footer {
 	margin-top: 20px;
