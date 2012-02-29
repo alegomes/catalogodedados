@@ -1,7 +1,4 @@
 class GranularidadeGeograficasController < ApplicationController
-
-	before_filter :authenticate_user!
-	
   # GET /granularidade_geograficas
   # GET /granularidade_geograficas.json
   def index

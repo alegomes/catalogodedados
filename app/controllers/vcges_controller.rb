@@ -1,7 +1,4 @@
 class VcgesController < ApplicationController
-
-	before_filter :authenticate_user!
-	
   # GET /vcges
   # GET /vcges.json
   def index

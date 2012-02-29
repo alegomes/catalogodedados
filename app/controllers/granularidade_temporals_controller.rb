@@ -1,7 +1,4 @@
 class GranularidadeTemporalsController < ApplicationController
-
-	before_filter :authenticate_user!
-	
   # GET /granularidade_temporals
   # GET /granularidade_temporals.json
   def index

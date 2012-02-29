@@ -8,17 +8,6 @@
 </head>
 <body>
 
-<div id='messages'>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-</div>
-
-<div id='devise'>
-	<% if user_signed_in? %>
-		<%= current_user.email %> | <%= link_to 'Sair', destroy_user_session_path, :method => :delete %>
-	<% end %>
-</div>
-
 <div class='center'>
 <%= yield %>
 </div>

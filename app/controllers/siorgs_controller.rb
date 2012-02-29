@@ -1,7 +1,4 @@
 class SiorgsController < ApplicationController
-
-	before_filter :authenticate_user!
-	
   # GET /siorgs
   # GET /siorgs.json
   def index
