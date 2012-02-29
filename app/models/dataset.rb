@@ -15,4 +15,16 @@ class Dataset < ActiveRecord::Base
 	validates :orgao, :nome, :descricao, :tipo_dataset, :formato_dataset, 
 						:licenca, :url, :granularidade_temporal, :granularidade_geografica,
 						:vcges, :presence => true
+						
+	before_save :check_data_atualizacao
+	after_save do
+		puts "Objeto salvo: #{self.inspect}"
+	end
+	
+	private
+	def check_data_atualizacao
+		self.data_atualizacao = nao_ha_data ? nil : data_atualizacao
+		
+		#puts "#{nao_ha_data} - #{data_atualizacao}"
+	end
 end

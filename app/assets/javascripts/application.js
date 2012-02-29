@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function hideDataAtualizacaoDeDataset() {
+	var nao_ha_data = $('#dataset_nao_ha_data').attr('checked');
+	if(nao_ha_data == 'checked') {
+		$('#select_field_data').hide();
+	}
+}
+
+$(function() {
+	hideDataAtualizacaoDeDataset();
+});

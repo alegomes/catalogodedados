@@ -38,7 +38,11 @@
 
 <p>
   <b>Data da Última Atualização:</b>
-  <%= @dataset.data_atualizacao %>
+  <% if @dataset.nao_ha_data %>
+		Não há.
+  <% else %>
+  	<%= @dataset.data_atualizacao %>
+  <% end %>
 </p>
 
 <p>
@@ -48,7 +52,7 @@
 
 <p>
   <b>Siorg:</b>
-  <%= @dataset.siorg.nome%>
+  <%= @dataset.siorg.nome if @dataset.siorg%>
 </p>
 
 <p>
