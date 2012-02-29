@@ -65,13 +65,15 @@
     <%= f.label :origem %><br />
     <%= f.text_field :origem, :size => '70' %>
   </div>
+
   <div class="field">
     <%= f.label :siorg %><br />
-    <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) %>
+    (Campo escondido até se definir o que fazer)
+    <!-- %= f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) % -->
   </div>
 
   <div class='container'>
-	<h3>Termos VCGE</h3>
+	<h3>Termos VCGE</h3> (ao menos 1 termo obrigatório)
 	<div class="field">
 		<table>
 			<%= f.fields_for :vcges do |v| %>

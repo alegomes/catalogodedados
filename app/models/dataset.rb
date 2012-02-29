@@ -13,6 +13,6 @@ class Dataset < ActiveRecord::Base
 	  :reject_if     => :all_blank
 
 	validates :orgao, :nome, :descricao, :tipo_dataset, :formato_dataset, 
-						:licenca, :url, :granularidade_temporal, :granularidade_geografica, 
-						:presence => true
+						:licenca, :url, :granularidade_temporal, :granularidade_geografica,
+						:vcges, :presence => true
 end
