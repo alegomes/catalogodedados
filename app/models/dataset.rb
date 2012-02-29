@@ -17,14 +17,9 @@ class Dataset < ActiveRecord::Base
 						:vcges, :presence => true
 						
 	before_save :check_data_atualizacao
-	after_save do
-		puts "Objeto salvo: #{self.inspect}"
-	end
 	
 	private
 	def check_data_atualizacao
 		self.data_atualizacao = nao_ha_data ? nil : data_atualizacao
-		
-		#puts "#{nao_ha_data} - #{data_atualizacao}"
 	end
 end
