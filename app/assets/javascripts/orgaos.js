@@ -13,8 +13,18 @@ var orgao = {
 	},
 	
 	setupBuscaSiorg: function() {
+
 		$('#codigo_siorg_field').focusout(function() {
 			orgao.buscaSiorg($(this));
+		});
+		
+		// Nao funciona pq?
+		$('#codigo_siorg_field').keydown(function(event) {
+			alert('keypressed='+event.which);
+		  if ( event.which == 13 ) {
+			orgao.buscaSiorg($(this));
+			event.preventDefault();
+		   }
 		});
 	}
 	
