@@ -1,4 +1,7 @@
 class TipoDatasetsController < ApplicationController
+
+	before_filter :authenticate_user!
+
   # GET /tipo_datasets
   # GET /tipo_datasets.json
   def index

@@ -1,4 +1,7 @@
 class FormatoDatasetsController < ApplicationController
+
+	before_filter :authenticate_user!
+	
   # GET /formato_datasets
   # GET /formato_datasets.json
   def index

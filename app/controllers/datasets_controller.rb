@@ -1,4 +1,7 @@
 class DatasetsController < ApplicationController
+
+	before_filter :authenticate_user!
+	
   # GET /datasets
   # GET /datasets.json
   def index

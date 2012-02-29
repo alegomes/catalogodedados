@@ -49,6 +49,9 @@ table {
 .small {
 	font-size: 70%;
 }
+#devise {
+	text-align: right;
+}
 footer {
 	margin-top: 20px;
 }
