@@ -21,7 +21,8 @@
 		</div>
 		<div class="field">
 		  <%= f.label :siorg %><br />
-		  <%= f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
+		  <!-- % f.collection_select(:siorg_id, Siorg.all, :id, :nome, {:include_blank => true}) %> (obrigatório) -->
+		  (campo desabilitado enquanto decidimos por uma solucao mais viavel que o select com 67 mil opções)
 		</div>
 		<div class="field">
 		  <%= f.label :licenca %><br />
