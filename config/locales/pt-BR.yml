@@ -134,6 +134,8 @@ pt-BR:
                     attributes:
                         email:
                             not_found: "nao encontrado"
+            messages:
+                record_invalid: "registro inválido"
                 
     will_paginate:
         previous_label: '<'
