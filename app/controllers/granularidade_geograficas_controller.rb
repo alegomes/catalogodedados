@@ -1,4 +1,5 @@
 class GranularidadeGeograficasController < ApplicationController
+	
   # GET /granularidade_geograficas
   # GET /granularidade_geograficas.json
   def index

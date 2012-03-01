@@ -1,4 +1,5 @@
 class LicencasController < ApplicationController
+	
   # GET /licencas
   # GET /licencas.json
   def index

@@ -1,4 +1,5 @@
 class SiorgsController < ApplicationController
+	
   # GET /siorgs
   # GET /siorgs.json
   def index

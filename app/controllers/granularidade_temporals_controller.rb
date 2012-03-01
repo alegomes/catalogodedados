@@ -1,4 +1,5 @@
 class GranularidadeTemporalsController < ApplicationController
+	
   # GET /granularidade_temporals
   # GET /granularidade_temporals.json
   def index

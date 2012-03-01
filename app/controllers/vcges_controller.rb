@@ -1,4 +1,5 @@
 class VcgesController < ApplicationController
+	
   # GET /vcges
   # GET /vcges.json
   def index

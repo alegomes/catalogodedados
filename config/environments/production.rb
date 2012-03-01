@@ -85,6 +85,6 @@ Catalogodedados::Application.configure do
 		 :domain             => 'gmail.com',    
 		 :authentication     => :plain,   
 		 :user_name          => 'alegomes@gmail.com',   
-		 :password           => "ENV['GMAILPASS']" # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])   
+		 :password           => 'kdoshmanu' #{}ENV['GMAILPASS']" # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])   
 	}
 end
