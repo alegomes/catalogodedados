@@ -71,6 +71,9 @@ Catalogodedados::Application.configure do
 	
 	Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)   
 
+  #:ssl => { :verify => OpenSSL::SSL::VERIFY_PEER, :ca_file => '/usr/lib/ssl/certs/ca-certificates.crt' })
+
+
 	ActionMailer::Base.delivery_method = :smtp   
 	ActionMailer::Base.perform_deliveries = true   
 	ActionMailer::Base.raise_delivery_errors = true   
@@ -79,7 +82,7 @@ Catalogodedados::Application.configure do
 		 :enable_starttls_auto => true,     
 		 :address            => 'smtp.gmail.com',   
 		 :port               => 587,   
-		 :tls                => true,   
+		 #:tls                => true,   
 		 :domain             => 'gmail.com',    
 		 :authentication     => :plain,   
 		 :user_name          => 'alegomes@gmail.com',   
