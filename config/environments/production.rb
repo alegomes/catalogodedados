@@ -82,6 +82,8 @@ Catalogodedados::Application.configure do
 		 :enable_starttls_auto => true,     
 		 :address            => 'smtp.gmail.com',   
 		 :port               => 587,   
+		 # Da pau
+		 # Solucao sugerida por http://stackoverflow.com/questions/9102014/upgraded-to-rails-3-2-0-and-get-sslerror-with-devise-tlsmail-gem-for-google-ap
 		 #:tls                => true,   
 		 :domain             => 'gmail.com',    
 		 :authentication     => :plain,   
