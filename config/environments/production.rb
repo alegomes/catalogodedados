@@ -1,5 +1,3 @@
-require 'tlsmail'       
-
 Catalogodedados::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -85,6 +83,6 @@ Catalogodedados::Application.configure do
 		 :domain             => 'gmail.com',    
 		 :authentication     => :plain,   
 		 :user_name          => 'alegomes@gmail.com',   
-		 :password           => 'kdoshmanu' #{}ENV['GMAILPASS']" # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])   
+		 :password           => "ENV['GMAILPASS']" # for security reasons you can use a environment variable too. (ENV['INFO_MAIL_PASS'])   
 	}
 end
