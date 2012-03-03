@@ -61,7 +61,14 @@
 	<div class='container'>
 		<h3>Datasets</h3>
 		<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
-	</div>	
+	</div>
+	<div class='container'>
+		<h3>Carta de Serviços ao Cidadão</h3>		
+		<div class="field">
+		    <%= render 'obediencias', :f => f %>
+		</div>
+		
+	</div>
   <div class="actions">
     <%= f.submit "Salvar" %>
   </div>

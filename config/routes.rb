@@ -1,5 +1,9 @@
 Catalogodedados::Application.routes.draw do
 
+  resources :inciso_carta_servicos_cidadaos
+
+  resources :carta_servicos_cidadaos
+
   devise_for :users
 
   root :to => 'orgaos#index'

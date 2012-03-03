@@ -70,5 +70,24 @@
 	</table>
 </div>
 
+<div class='container'>
+	<h3>Carta de Serviço ao Cidadão</h3>
+	<table>
+		<tr>
+			<td></td><td>Contempla?</td><td>Comentários</td>
+		</tr>
+		<% @orgao.obediencias.each do |obediencia| %>
+			<tr>
+			<% inciso = obediencia.inciso_carta_servicos_cidadao %>
+			<td>
+				<b>Art. <%= inciso.artigo %> &sect; <%= inciso.paragrafo %></b> <%= inciso.inciso %> - <%= inciso.texto %>
+			</td>
+			<td><%= obediencia.contempla %></td>
+			<td><%= obediencia.comentarios %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
 <%= link_to 'Editar', edit_orgao_path(@orgao) %> |
 <%= link_to 'Voltar', orgaos_path %>

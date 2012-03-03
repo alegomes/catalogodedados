@@ -69,7 +69,8 @@ pt-BR:
                 nome: 
                     one: "Nome"
                     other : "Nomes"
-                url: "URL"
+                url: "URL do Site Oficial"
+                url_carta_cidadao: "URL da Carta de Serviços ao Cidadão"
                 siorg: "Código SIORG"
                 licenca: "Licença"
 
@@ -128,6 +129,12 @@ pt-BR:
             user:
                 email: "Email"
                 password: "Senha"
+                
+            carta_servico_cidadao:
+                artigo: "Artigo"
+                paragrafo: "Parágrafo"
+                inciso: "Inciso"
+                
         errors:
             models:
                 user:

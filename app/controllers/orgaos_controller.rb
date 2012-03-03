@@ -19,8 +19,15 @@ class OrgaosController < ApplicationController
   end
 
   def new
+	puts "NNNNNNNEEEEEEEWWWWW"
     @orgao = Orgao.new
 		@orgao.siorg = Siorg.new
+		IncisoCartaServicosCidadao.all.each do |inciso|
+			@orgao.obediencias << Obediencia.new(
+										:orgao => @orgao,
+										:inciso_carta_servicos_cidadao => inciso)
+
+		end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,7 +41,7 @@ class OrgaosController < ApplicationController
 
   def create
 		@orgao = Orgao.new(params[:orgao])
-		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) 
+		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) || Siorg.new
 
     respond_to do |format|
       if @orgao.save
