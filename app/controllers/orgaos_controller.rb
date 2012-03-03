@@ -19,7 +19,6 @@ class OrgaosController < ApplicationController
   end
 
   def new
-	puts "NNNNNNNEEEEEEEWWWWW"
     @orgao = Orgao.new
 		@orgao.siorg = Siorg.new
 		IncisoCartaServicosCidadao.all.each do |inciso|

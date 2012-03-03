@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303135732) do
+ActiveRecord::Schema.define(:version => 20120303195917) do
 
   create_table "carta_servicos_cidadaos", :force => true do |t|
     t.integer  "artigo"
@@ -120,8 +120,9 @@ ActiveRecord::Schema.define(:version => 20120303135732) do
     t.string   "url"
     t.integer  "siorg_id"
     t.integer  "licenca_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.string   "url_carta_servicos_cidadao"
   end
 
   add_index "orgaos", ["licenca_id"], :name => "index_orgaos_on_licenca_id"

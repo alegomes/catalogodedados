@@ -19,6 +19,7 @@
 		  <%= f.label :nome %><br />
 		  <%= f.text_field :nome, :size => '70' %> (obrigatório)
 		</div>
+		
 		<div class="field">
 			<table>
 				<tr class='top'>
@@ -34,6 +35,7 @@
 				</tr>
 			</table>
 		</div>
+		
 		<div class="field">
 		  <%= f.label :licenca %><br />
 		  <%= f.collection_select(:licenca_id, Licenca.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
@@ -42,7 +44,9 @@
 		  <%= f.label :url %><br />
 		  <%= f.text_field :url, :size => '70' %> (obrigatório)
 		</div>
+		
 	</div>
+	
 	<div class='container'>
 		<h3>Páginas Associadas</h3>
 		<div class="field">
@@ -58,12 +62,18 @@
 			<%= link_to_add_links 'Novo Link', f, :links %>
 		</div>
 	</div>
-	<div class='container'>
+	<!-- div class='container'>
 		<h3>Datasets</h3>
-		<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
-	</div>
+		< %= link_to 'Novo Dataset', new_dataset_path, :class => 'button' % >
+	</div -->
 	<div class='container'>
-		<h3>Carta de Serviços ao Cidadão</h3>		
+		<h3>Carta de Serviços ao Cidadão</h3>
+		
+		<div class="field">
+		  <%= f.label :url_carta_servicos_cidadao %><br />
+		  <%= f.text_field :url_carta_servicos_cidadao, :size => '70' %>
+		</div>
+		
 		<div class="field">
 		    <%= render 'obediencias', :f => f %>
 		</div>

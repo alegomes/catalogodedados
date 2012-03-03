@@ -70,9 +70,9 @@ pt-BR:
                     one: "Nome"
                     other : "Nomes"
                 url: "URL do Site Oficial"
-                url_carta_cidadao: "URL da Carta de Serviços ao Cidadão"
                 siorg: "Código SIORG"
                 licenca: "Licença"
+                url_carta_servicos_cidadao: "URL da Carta de Serviços a o Cidadão"
 
             dataset:
                 orgao: "Órgão"
