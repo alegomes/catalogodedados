@@ -1,0 +1,29 @@
+<h1>Carta de Serviço ao Cidadão</h1>
+
+<table>
+  <tr>
+    <th>Artigo</th>
+    <th>Paragrafo</th>
+    <th>Inciso</th>
+    <th>Texto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inciso_carta_servicos_cidadaos.each do |inciso_carta_servicos_cidadao| %>
+  <tr>
+    <td><%= inciso_carta_servicos_cidadao.artigo %></td>
+    <td><%= inciso_carta_servicos_cidadao.paragrafo %></td>
+    <td><%= inciso_carta_servicos_cidadao.inciso %></td>
+    <td><%= inciso_carta_servicos_cidadao.texto %></td>
+    <td><%= link_to 'Exibit', inciso_carta_servicos_cidadao %></td>
+    <td><%= link_to 'Editar', edit_inciso_carta_servicos_cidadao_path(inciso_carta_servicos_cidadao) %></td>
+    <td><%= link_to 'Remover', inciso_carta_servicos_cidadao, confirm: 'Certeza?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Inciso', new_inciso_carta_servicos_cidadao_path %>

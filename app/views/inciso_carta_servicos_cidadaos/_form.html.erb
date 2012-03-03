@@ -1,0 +1,33 @@
+<%= form_for(@inciso_carta_servicos_cidadao) do |f| %>
+  <% if @inciso_carta_servicos_cidadao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inciso_carta_servicos_cidadao.errors.count, "erro") %> foram encontrados:</h2>
+
+      <ul>
+      <% @inciso_carta_servicos_cidadao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :artigo %><br />
+    <%= f.number_field :artigo %>
+  </div>
+  <div class="field">
+    <%= f.label :paragrafo %><br />
+    <%= f.number_field :paragrafo %>
+  </div>
+  <div class="field">
+    <%= f.label :inciso %><br />
+    <%= f.text_field :inciso %>
+  </div>
+  <div class="field">
+    <%= f.label :texto %><br />
+    <%= f.text_field :texto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

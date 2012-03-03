@@ -1,0 +1,33 @@
+<table>
+	<% anterior = IncisoCartaServicosCidadao.new %>
+	
+	<tr>
+		<td></td>
+		<td>Atende?</td>
+		<td>Comentários</td>
+	</tr>
+	<%= f.fields_for :obediencias do |o| %>
+
+		<% obediencia = o.object %>
+		<% inciso = obediencia.inciso_carta_servicos_cidadao %>
+	
+		<% if inciso.artigo != anterior.artigo || 
+			  inciso.paragrafo != anterior.paragrafo %>
+
+			<tr><td colspan='3'>
+				<b>Art. <%= inciso.artigo %> &sect; <%= inciso.paragrafo %></b>
+			</td></tr>
+
+		<% end %>
+
+		<tr valign='top'>
+			<td width='50%'><%= inciso.inciso %> - <%= inciso.texto %></td>
+			<td width='10%'><%= o.select :contempla, Obediencia.contemplas.keys, :include_blank => true %></td>
+			<td width='40%'><%= o.text_area :comentarios, :size => '30x3' %></td>
+			<%= o.hidden_field :inciso_carta_servicos_cidadao_id, :value => obediencia.inciso_carta_servicos_cidadao.id %>
+		</tr>
+	
+		<% anterior = inciso %>
+
+	<% end %>
+</table>
