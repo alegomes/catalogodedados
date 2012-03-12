@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303195917) do
+ActiveRecord::Schema.define(:version => 20120312184255) do
 
   create_table "carta_servicos_cidadaos", :force => true do |t|
     t.integer  "artigo"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(:version => 20120303195917) do
   create_table "datasets", :force => true do |t|
     t.string   "nome"
     t.text     "descricao"
-    t.string   "url"
+    t.text     "url"
     t.string   "guarda"
-    t.string   "url_documentacao"
+    t.text     "url_documentacao"
     t.string   "cobertura_temporal"
     t.string   "cobertura_geografica"
     t.string   "origem"
