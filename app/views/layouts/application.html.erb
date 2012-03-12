@@ -24,13 +24,15 @@
 </div>
 
 
-<%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>
+<%= render :partial => ‘layouts/ga’ if Rails.env.production? %>
 
 </body>
 <footer class='center' align='center'>
 	<ul>
 		<li><%= link_to 'Órgãos', orgaos_path %></li>
 		<li><%= link_to 'Datasets', datasets_path %></li>
+	</ul>
+	<ul>
 		<li><%= link_to 'Tipos de Datasets', tipo_datasets_path %></li>
 		<li><%= link_to 'Formatos de Datasets', formato_datasets_path %></li>
 		<li><%= link_to 'Licenças', licencas_path %></li>

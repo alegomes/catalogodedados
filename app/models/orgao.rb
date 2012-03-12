@@ -15,4 +15,6 @@ class Orgao < ActiveRecord::Base
 	   :reject_if     => :all_blank
 
 	validates :nome, :url, :licenca, :siorg, :presence => true
+	
+	default_scope order("nome")
 end

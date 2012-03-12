@@ -109,7 +109,7 @@
     <%= f.label :data_atualizacao %><br />
 	<%= f.check_box :nao_ha_data, :onclick => "javascript:toogleDataAtualizacao(this)" %> Não há data.<br/>
     <span id='select_field_data'>
-	    <%= f.date_select :data_atualizacao, :date_separator => '/', :include_blank => true %>
+	    <%= f.date_select :data_atualizacao, :date_separator => '/', :include_blank => true, :discard_day => true %>
 	</span>
 	
   </div>

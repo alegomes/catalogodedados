@@ -10,7 +10,11 @@
 
 	<p>
 	  <b>Siorg:</b>
-	  <%= @orgao.siorg.codigo %> - <%= @orgao.siorg.nome %>
+	  <% if @orgao.siorg %>
+	  	<%= @orgao.siorg.codigo %> - <%= @orgao.siorg.nome %>
+	  <% else %>
+		Código SIORG não informado.
+	  <% end %>
 	</p>
 
 	<p>
@@ -46,13 +50,15 @@
 </div>
 <div class='container'>
 	<h3>Datasets</h3>
-	<table class='border' width='70%'>
+	<table class='border'>
 		<% if @orgao.datasets.empty? %>
 			Nenhum dataset cadastrado.<p/>
 		<% else %>
 			<tr>
 				<th>Nome</th>
 				<th>Formato</th>
+				<th>Tipo</th>
+				<th>Descrição</th>
 				<th></th>
 				<th></th>
 				<th></th>
@@ -60,8 +66,10 @@
 		<% end %>
 		<% @orgao.datasets.each do |dataset| %>
 			<tr class='border'>
-				<td class='border' width='30%'><%= dataset.nome %></td>
-				<td class='border' width='40%'><%= dataset.formato_dataset.nome %></td>
+				<td class='border'><%= dataset.nome %></td>
+				<td class='border'><%= dataset.formato_dataset.nome %></td>
+				<td class='border'><%= dataset.tipo_dataset.nome %></td>
+				<td class='border'><%= dataset.descricao %></td>
 				<td align='center'><%= link_to 'Detalhar', dataset %></td>
 			    <td align='center'><%= link_to 'Editar', edit_dataset_path(dataset) %></td>
 			    <td align='center'><%= link_to 'Apagar', dataset, confirm: 'Certeza?', method: :delete %>

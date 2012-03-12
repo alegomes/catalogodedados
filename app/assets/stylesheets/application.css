@@ -37,12 +37,13 @@ h1 {
 table {
 	width: 100%;
 }
-.border {
+
+/*.border {
 	border-collapse: collapse;
 }
-.border th td {
+tr.border {
 	border: 1px solid black
-}
+}*/
 .top {
 	vertical-align: text-top;
 }
