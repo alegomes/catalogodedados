@@ -50,6 +50,22 @@
 </div>
 <div class='container'>
 	<h3>Datasets</h3>
+	<h6>
+		Por tipo:
+		<ul>
+		<% TipoDataset.all.each do |tipo| %>
+			<li><%= Dataset.where(:orgao_id => @orgao.id, :tipo_dataset_id => tipo.id).size %> <%= tipo.nome %></li>
+			<% end %>
+		</ul>
+	</h6>
+	<h6>
+		Por formato:
+		<ul>
+		<% FormatoDataset.all.each do |formato| %>
+			<li><%= Dataset.where(:orgao_id => @orgao.id, :formato_dataset_id => formato.id).size %> <%= formato.nome %></li>
+		<% end %>
+		</ul>
+	</h6>
 	<table class='border'>
 		<% if @orgao.datasets.empty? %>
 			Nenhum dataset cadastrado.<p/>
