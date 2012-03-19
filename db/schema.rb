@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120312184255) do
+ActiveRecord::Schema.define(:version => 20120319125450) do
 
   create_table "carta_servicos_cidadaos", :force => true do |t|
     t.integer  "artigo"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(:version => 20120312184255) do
     t.integer  "vcge_id"
     t.integer  "granularidade_temporal_id"
     t.integer  "granularidade_geografica_id"
-    t.integer  "formato_dataset_id"
     t.integer  "tipo_dataset_id"
     t.integer  "licenca_id"
     t.datetime "created_at",                  :null => false
@@ -45,13 +44,20 @@ ActiveRecord::Schema.define(:version => 20120312184255) do
     t.boolean  "nao_ha_data"
   end
 
-  add_index "datasets", ["formato_dataset_id"], :name => "index_datasets_on_formato_dataset_id"
   add_index "datasets", ["granularidade_geografica_id"], :name => "index_datasets_on_granularidade_geografica_id"
   add_index "datasets", ["granularidade_temporal_id"], :name => "index_datasets_on_granularidade_temporal_id"
   add_index "datasets", ["licenca_id"], :name => "index_datasets_on_licenca_id"
   add_index "datasets", ["siorg_id"], :name => "index_datasets_on_siorg_id"
   add_index "datasets", ["tipo_dataset_id"], :name => "index_datasets_on_tipo_dataset_id"
   add_index "datasets", ["vcge_id"], :name => "index_datasets_on_vcge_id"
+
+  create_table "datasets_formato_datasets", :id => false, :force => true do |t|
+    t.integer "dataset_id"
+    t.integer "formato_dataset_id"
+  end
+
+  add_index "datasets_formato_datasets", ["dataset_id"], :name => "index_datasets_formato_datasets_on_dataset_id"
+  add_index "datasets_formato_datasets", ["formato_dataset_id"], :name => "index_datasets_formato_datasets_on_formato_dataset_id"
 
   create_table "datasets_vcges", :id => false, :force => true do |t|
     t.integer "dataset_id"

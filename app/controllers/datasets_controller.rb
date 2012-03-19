@@ -36,12 +36,23 @@ class DatasetsController < ApplicationController
   # GET /datasets/1/edit
   def edit
     @dataset = Dataset.find(params[:id])
+			@formato_dataset_id = []
+
+		if @dataset && @dataset.formato_datasets
+      @dataset.formato_datasets.each do |formato|
+				@formato_dataset_id << formato.id
+			end
+		end
   end
 
   # POST /datasets
   # POST /datasets.json
   def create
     @dataset = Dataset.new(params[:dataset])
+
+		params[:formato_dataset_id].each do |formato_id|
+			@dataset.formato_datasets << FormatoDataset.find(formato_id)
+		end
 
     respond_to do |format|
       if @dataset.save
@@ -58,6 +69,11 @@ class DatasetsController < ApplicationController
   # PUT /datasets/1.json
   def update
     @dataset = Dataset.find(params[:id])
+
+		@dataset.formato_datasets.clear
+		params[:formato_dataset_id].each do |formato_id|
+			@dataset.formato_datasets << FormatoDataset.find(formato_id)
+		end
 
     respond_to do |format|
       if @dataset.update_attributes(params[:dataset])

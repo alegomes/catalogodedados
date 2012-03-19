@@ -19,7 +19,11 @@
 	    <td><%= dataset.orgao.nome %></td>
 	    <td><%= dataset.tipo_dataset.nome if dataset.tipo_dataset %></td>
 	    <td><%= dataset.nome %></td>
-	    <td><%= dataset.formato_dataset.nome if dataset.formato_dataset %></td>
+	    <td>
+			<% dataset.formato_datasets.each do |formato| %>
+				<%= formato.nome %>&nbsp;
+			<% end %>
+		</td>
 	    <td><%= dataset.licenca.nome %></td>
 	    <td align='center'><%= link_to 'Detalhar', dataset %></td>
 	    <td align='center'><%= link_to 'Editar', edit_dataset_path(dataset) %></td>

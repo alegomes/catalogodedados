@@ -79,8 +79,12 @@
 </p>
 
 <p>
-  <b>Formato dataset:</b>
-  <%= @dataset.formato_dataset.nome if @dataset.formato_dataset %>
+  <b>Formatos do dataset:</b>
+  <ul>
+	<% @dataset.formato_datasets.each do |formato| %>
+		<li><%= formato.nome %></li>
+	<% end %>
+  </ul>
 </p>
 
 <p>

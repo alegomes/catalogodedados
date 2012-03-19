@@ -82,7 +82,7 @@ pt-BR:
                 url_documentacao: "URL da Documentação Técnica do Dataset"
                 descricao: "Descrição do Dataset e Links para sua Documentação Semântica"
                 comentario: "Comentário"
-                formato_dataset: "Formato"
+                formato_datasets: "Formatos"
                 licenca: "Licença"
                 guarda: "Nome do órgão que detém a guarda dos dados"
                 origem: "Origem dos Dados"

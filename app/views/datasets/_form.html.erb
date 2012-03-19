@@ -47,8 +47,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :formato_dataset %><br />
-    <%= f.collection_select(:formato_dataset_id, FormatoDataset.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
+    <%= f.label :formato_datasets %><br />
+	<%= select_tag 'formato_dataset_id[]', options_for_select(FormatoDataset.all_as_hash, @formato_dataset_id), { :multiple => true, :size =>5, :id => "dataset_formato_datasets" } %> (obrigatório)
   </div>
 
   <div class="field">
