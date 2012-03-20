@@ -27,7 +27,7 @@ class Orgao < ActiveRecord::Base
 				vcges << "#{v.uri},"
 				puts "#{v.inspect}"
 			end
-			body << "#{nome};#{d.descricao};#{d.url};#{d.guarda};#{d.url_documentacao};#{d.cobertura_temporal};#{d.cobertura_geografica};#{d.origem};#{vcges};#{d.granularidade_temporal.nome};#{d.granularidade_geografica.nome};#{d.tipo_dataset.nome};#{d.licenca.nome};#{d.created_at};#{d.updated_at};#{d.data_atualizacao};#{d.comentario};#{d.nao_ha_data}\n"
+			body << "\"#{nome}\";\"#{d.descricao}\";\"#{d.url}\";\"#{d.guarda}\";\"#{d.url_documentacao}\";\"#{d.cobertura_temporal}\";\"#{d.cobertura_geografica}\";\"#{d.origem}\";\"#{vcges}\";\"#{d.granularidade_temporal.nome}\";\"#{d.granularidade_geografica.nome}\";\"#{d.tipo_dataset.nome}\";\"#{d.licenca.nome}\";\"#{d.created_at}\";\"#{d.updated_at}\";\"#{d.data_atualizacao}\";\"#{d.comentario}\";\"#{d.nao_ha_data}\"\n"
 		end
 		(header + body)
 	end
