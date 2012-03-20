@@ -82,4 +82,16 @@ class OrgaosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def export_csv
+		orgao = Orgao.find(params[:id])
+		orgao.datasets
+		
+		nome_arquivo = "#{orgao.nome}.csv"
+
+    response.content_type = 'text/plain'
+    response.headers['Content-Disposition'] = "attachment; filename=#{nome_arquivo}"
+
+    render :text => orgao.datasets_as_s
+	end
 end

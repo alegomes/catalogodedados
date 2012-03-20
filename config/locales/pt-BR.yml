@@ -87,7 +87,7 @@ pt-BR:
                 guarda: "Nome do órgão que detém a guarda dos dados"
                 origem: "Origem dos Dados"
                 siorg: "Código SIORG"
-                vcge: "URI VCGE"
+                vcges: "Termos VCGE"
                 granularidade_temporal: "Granularidade Temporal"
                 cobertura_temporal: "Cobertura Temporal"
                 granularidade_geografica: "Granularidade Geográfica"

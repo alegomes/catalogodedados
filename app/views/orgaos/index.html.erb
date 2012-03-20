@@ -8,6 +8,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @orgaos.each do |orgao| %>
@@ -18,6 +19,7 @@
     <td align='center'><%= link_to 'Detalhes', orgao %></td>
     <td align='center'><%= link_to 'Editar', edit_orgao_path(orgao) %></td>
     <td align='center'><%= link_to 'Remover', orgao, confirm: 'Certeza?', method: :delete %></td>
+	<td align='center'><%= link_to 'CSV', export_csv_orgao_path(orgao) %></td>
   </tr>
 <% end %>
 </table>

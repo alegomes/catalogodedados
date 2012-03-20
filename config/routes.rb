@@ -12,6 +12,7 @@ Catalogodedados::Application.routes.draw do
 
   resources :orgaos do
 		get 'new_link', :on => :collection
+		get 'export_csv', :on => :member
 	  resources :links 
 	end
 

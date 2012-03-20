@@ -31,5 +31,9 @@ describe OrgaosController do
       delete("/orgaos/1").should route_to("orgaos#destroy", :id => "1")
     end
 
+		it 'routes to #export_csv' do
+			get("/orgaos/1/export_csv").should route_to("orgaos#export_csv", :id => "1")
+		end
+
   end
 end

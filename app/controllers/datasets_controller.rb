@@ -71,8 +71,10 @@ class DatasetsController < ApplicationController
     @dataset = Dataset.find(params[:id])
 
 		@dataset.formato_datasets.clear
-		params[:formato_dataset_id].each do |formato_id|
-			@dataset.formato_datasets << FormatoDataset.find(formato_id)
+		if params[:formato_dataset_id]
+			params[:formato_dataset_id].each do |formato_id|
+				@dataset.formato_datasets << FormatoDataset.find(formato_id)
+			end
 		end
 
     respond_to do |format|

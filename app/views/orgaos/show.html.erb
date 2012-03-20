@@ -49,7 +49,7 @@
 	</p>
 </div>
 <div class='container'>
-	<h3>Datasets</h3>
+	<h3>Datasets (<%= link_to 'CSV', export_csv_orgao_path(@orgao) %>)</h3>
 	<h6>
 		Por tipo:
 		<ul>
@@ -62,10 +62,11 @@
 		Por formato:
 		<ul>
 		<% FormatoDataset.all.each do |formato| %>
-			<li><%= Dataset.where(:orgao_id => @orgao.id, :formato_dataset_id => formato.id).size %> <%= formato.nome %></li>
+			<li><!-- %= Dataset.where(:orgao_id => @orgao.id, :formato_dataset_id => formato.id).size % -->?? <%= formato.nome %></li>
 		<% end %>
 		</ul>
 	</h6>
+
 	<table class='border'>
 		<% if @orgao.datasets.empty? %>
 			Nenhum dataset cadastrado.<p/>
@@ -83,7 +84,11 @@
 		<% @orgao.datasets.each do |dataset| %>
 			<tr class='border'>
 				<td class='border'><%= dataset.nome %></td>
-				<td class='border'><%= dataset.formato_dataset.nome %></td>
+				<td class='border'>
+					<% dataset.formato_datasets.each do |formato| %>
+						<%= formato.nome %>&nbsp;
+					<% end %>
+				</td>
 				<td class='border'><%= dataset.tipo_dataset.nome %></td>
 				<td class='border'><%= dataset.descricao %></td>
 				<td align='center'><%= link_to 'Detalhar', dataset %></td>
