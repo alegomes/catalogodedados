@@ -1,4 +1,6 @@
 class Orgao < ActiveRecord::Base
+	belongs_to :created_by, :class_name => "User",  :foreign_key => "created_by"
+	belongs_to :modified_by, :class_name => "User",  :foreign_key => "modified_by"
   belongs_to :siorg
   belongs_to :licenca
   has_many :links, :dependent => :destroy

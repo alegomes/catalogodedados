@@ -31,6 +31,16 @@
 		<b>Comentários</b>
 		<%= @orgao.comentarios %>
 	</p>
+	
+	<p>
+		<b>Criado por</b>
+		<%= @orgao.created_by.email if @orgao.created_by %>
+	</p>
+
+	<p>
+		<b>Última modificação feita por</b>
+		<%= @orgao.modified_by.email if @orgao.modified_by %>
+	</p>
 
 </div>
 <div class='container'>

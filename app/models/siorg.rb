@@ -7,9 +7,14 @@ class Siorg < ActiveRecord::Base
 		stack.push(self.nome)
 		
 		siorg = self
-		while siorg != siorg.siorg_pai
-			stack.push(siorg.siorg_pai.nome)
-			siorg = siorg.siorg_pai
+		
+		# Por alguma razao, todos os codigos_pai sumiram.
+		# Deixa isso aqui por enquanto ate eu descobrir o que houve
+		if siorg.siorg_pai
+			while siorg != siorg.siorg_pai
+				stack.push(siorg.siorg_pai.nome)
+				siorg = siorg.siorg_pai
+			end
 		end
 		
 		array = []

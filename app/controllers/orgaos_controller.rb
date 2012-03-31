@@ -40,7 +40,8 @@ class OrgaosController < ApplicationController
 
   def create
 		@orgao = Orgao.new(params[:orgao])
-		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) || Siorg.new
+		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) # || Siorg.new
+		@orgao.created_by = current_user
 
     respond_to do |format|
       if @orgao.save
@@ -59,7 +60,8 @@ class OrgaosController < ApplicationController
   def update
     @orgao = Orgao.find(params[:id])
 		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) 
-
+		@orgao.modified_by = current_user
+		
     respond_to do |format|
       if @orgao.update_attributes(params[:orgao])
         format.html { redirect_to @orgao, notice: 'Orgao was successfully updated.' }

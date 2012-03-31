@@ -25,12 +25,16 @@
 				<tr class='top'>
 				<td>
 					<%= f.label :siorg %>
-					<%= hidden_field_tag :id_siorg_field, @orgao.siorg.id %><br />
-			
-				  	<%= text_field_tag :codigo_siorg, @orgao.siorg.codigo,  :id => 'codigo_siorg_field' %>
+					<% if @orgao.siorg %>
+						<%= hidden_field_tag :id_siorg_field, @orgao.siorg.id %><br />
+				  		<%= text_field_tag :codigo_siorg, @orgao.siorg.codigo,  :id => 'codigo_siorg_field' %>
+					<% else %>
+						<%= hidden_field_tag :id_siorg_field, '' %><br />
+				  		<%= text_field_tag :codigo_siorg, '',  :id => 'codigo_siorg_field' %>
+					<% end %>
 				</td>
 				<td class='small'>
-				    <span id='nome_siorg'><%= @orgao.siorg.nome %></span>
+				    <span id='nome_siorg'><%= @orgao.siorg.nome if @orgao.siorg %></span>
 				</td>
 				</tr>
 			</table>
