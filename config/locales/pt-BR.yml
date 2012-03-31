@@ -73,6 +73,7 @@ pt-BR:
                 siorg: "Código SIORG"
                 licenca: "Licença"
                 url_carta_servicos_cidadao: "URL da Carta de Serviços a o Cidadão"
+                comentarios: "Comentários"
 
             dataset:
                 orgao: "Órgão"
