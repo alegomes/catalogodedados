@@ -61,7 +61,7 @@ class OrgaosController < ApplicationController
     @orgao = Orgao.find(params[:id])
 		@orgao.siorg = Siorg.find_by_codigo(params[:codigo_siorg]) 
 		@orgao.modified_by = current_user
-		
+		puts "Orgao modified by #{current_user}"
     respond_to do |format|
       if @orgao.update_attributes(params[:orgao])
         format.html { redirect_to @orgao, notice: 'Orgao was successfully updated.' }
