@@ -1,7 +1,8 @@
 class OrgaosController < ApplicationController
 
   def index
-    @orgaos = Orgao.all
+    #@orgaos = Orgao.all
+		@orgaos = Orgao.paginate(:page => params[:page], :limit => 15)
 
     respond_to do |format|
       format.html # index.html.erb

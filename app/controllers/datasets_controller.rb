@@ -3,7 +3,8 @@ class DatasetsController < ApplicationController
   # GET /datasets
   # GET /datasets.json
   def index
-    @datasets = Dataset.all
+    #@datasets = Dataset.all
+		@datasets = Dataset.paginate(:page => params[:page], :limit => 15)
 
     respond_to do |format|
       format.html # index.html.erb
