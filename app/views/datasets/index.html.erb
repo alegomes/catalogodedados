@@ -27,7 +27,7 @@
 	    <td><%= dataset.licenca.nome %></td>
 	    <td align='center'><%= link_to 'Detalhar', dataset %></td>
 	    <td align='center'><%= link_to 'Editar', edit_dataset_path(dataset) %></td>
-	    <td align='center'><%= link_to 'Apagar', dataset, confirm: 'Certeza?', method: :delete %></td>
+	    <td align='center'><%= link_to 'Remover', dataset, confirm: 'Certeza?', method: :delete %></td>
 	  </tr>
 	<% end %>
 	</table>
