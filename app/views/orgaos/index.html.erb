@@ -3,7 +3,7 @@
 <table class='border'>
   <tr>
     <th width='40%'>Nome do Órgão</th>
-    <th width='50%'>URL</th>
+    <th width='50%'>Data de Cadastramento</th>
 	<th width='5%'>Quantidade de Datasets</th>
     <th></th>
     <th></th>
@@ -14,7 +14,7 @@
 <% @orgaos.each do |orgao| %>
   <tr>
     <td><%= orgao.nome %></td>
-    <td><%= orgao.url %></td>
+    <td align='center'><%= orgao.created_at %></td>
 	<td align='center'><%= orgao.datasets.size %></td>
     <td align='center'><%= link_to 'Detalhes', orgao %></td>
     <td align='center'><%= link_to 'Editar', edit_orgao_path(orgao) %></td>
