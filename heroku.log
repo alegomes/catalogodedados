@@ -1,0 +1,197 @@
+2012-04-29T18:44:22+00:00 app[web.1]: p://vocab.e.gov.br/2011/03/vcge#arquivos ", "_destroy"=>"false"}}, "granularidade_temporal_id"=>"4", "cobertura_temporal"=>"", "granularidade_geografica_id"=>"1", "cobertura_geografica"=>"", "nao_ha_data"=>"1", "data_atualizacao(3i)"=>"1", "data_atualizacao(2i)"=>"4", "data_atualizacao(1i)"=>"2012"}, "formato_dataset_id"=>["9", "2", "4"], "commit"=>"Salvar"}
+2012-04-29T18:44:22+00:00 app[web.1]: Redirected to http://catalogodedados.heroku.com/datasets/2817
+2012-04-29T18:44:22+00:00 app[web.1]: Completed 302 Found in 219ms (ActiveRecord: 206.2ms)
+2012-04-29T18:44:22+00:00 app[web.1]: cache: [POST /datasets] invalidate, pass
+2012-04-29T18:44:22+00:00 heroku[router]: POST catalogodedados.heroku.com/datasets dyno=web.1 queue=0 wait=0ms service=230ms status=302 bytes=113
+2012-04-29T18:44:22+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:18:44:22 +0000] "POST /datasets HTTP/1.1" 302 124 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T18:44:22+00:00 app[web.1]: 
+2012-04-29T18:44:22+00:00 app[web.1]: 
+2012-04-29T18:44:22+00:00 app[web.1]: Started GET "/datasets/2817" for 187.65.159.160 at 2012-04-29 11:44:22 -0700
+2012-04-29T18:44:22+00:00 app[web.1]:   Parameters: {"id"=>"2817"}
+2012-04-29T18:44:22+00:00 app[web.1]: Processing by DatasetsController#show as HTML
+2012-04-29T18:44:22+00:00 app[web.1]:   Rendered datasets/show.html.erb within layouts/application (20.9ms)
+2012-04-29T18:44:22+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T18:44:22+00:00 app[web.1]: Completed 200 OK in 102ms (Views: 8.1ms | ActiveRecord: 92.3ms)
+2012-04-29T18:44:22+00:00 app[web.1]: cache: [GET /datasets/2817] miss
+2012-04-29T18:44:22+00:00 heroku[router]: GET catalogodedados.heroku.com/datasets/2817 dyno=web.1 queue=0 wait=0ms service=108ms status=200 bytes=3282
+2012-04-29T18:44:22+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:18:44:22 +0000] "GET /datasets/2817 HTTP/1.1" 200 1477 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T18:59:53+00:00 app[web.1]: 
+2012-04-29T18:59:53+00:00 app[web.1]: 
+2012-04-29T18:59:53+00:00 app[web.1]: Started GET "/datasets" for 187.65.180.245 at 2012-04-29 11:59:53 -0700
+2012-04-29T18:59:53+00:00 app[web.1]: Processing by DatasetsController#index as HTML
+2012-04-29T18:59:53+00:00 app[web.1]:   Rendered datasets/index.html.erb within layouts/application (134.9ms)
+2012-04-29T18:59:53+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T18:59:54+00:00 app[web.1]: Completed 200 OK in 143ms (Views: 53.5ms | ActiveRecord: 88.0ms)
+2012-04-29T18:59:54+00:00 app[web.1]: cache: [GET /datasets] miss
+2012-04-29T18:59:54+00:00 heroku[router]: GET catalogodedados.heroku.com/datasets dyno=web.1 queue=0 wait=0ms service=157ms status=200 bytes=10138
+2012-04-29T18:59:54+00:00 heroku[nginx]: 187.65.180.245 - - [29/Apr/2012:18:59:54 +0000] "GET /datasets HTTP/1.1" 200 1970 "http://catalogodedados.heroku.com/datasets/2811" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0" catalogodedados.heroku.com
+2012-04-29T18:59:55+00:00 app[web.1]: 
+2012-04-29T18:59:55+00:00 app[web.1]: 
+2012-04-29T18:59:55+00:00 app[web.1]: Started GET "/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYlJREFUeNrMVD1rwlAUPfkwBBxFKQQlDhmjqzj4F9w7FfwThZaW9n8UnDrrn1BEXNTBRQQhEE1ERRR0Sd990A7VaKJJ6YHzEu4N99z3zrsRGo2GAuCF8YFRQzSwGOuM7zJb3hgfES2o0SdGSWRLDfGhRgLpGAXS4q0VCoUCBEHwzd8skM/nUSqVoCjKybz8O1CtVn2LeZ4H27YxnU6xXC6x3+95PJPJoFKpoN1uY7vdnhfww3w+x3A4xGaz4d3quo5sNvuTTyaTXKTb7cJ13csCzWbzKKaqKj/zXC4HSZKO8iRcLpcxGAwwmUzC7UDTNBSLRSQSiVAeyUGNpM4v4XA4oNfr8eMMLJBKpWCaJn9fLBawLAur1Qq73Y6b/H0pyNyrTDYMA7PZDKPRCOv1+uQ3ZCqZe9UcOI6DTqfjW5zMbLVa3Bu6RaE9GI/HZ/P9fp8/qfipYROj+ukEnuQgEx0GImKGHGSC//UO/kTAibG+QwIfMQrUyeRXusaM94x3ERW2GT8Zn78EGACRmoKUJhB1TQAAAABJRU5ErkJggg==" for 187.65.180.245 at 2012-04-29 11:59:55 -0700
+2012-04-29T18:59:55+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYlJREFUeNrMVD1rwlAUPfkwBBxFKQQlDhmjqzj4F9w7FfwThZaW9n8UnDrrn1BEXNTBRQQhEE1ERRR0Sd990A7VaKJJ6YHzEu4N99z3zrsRGo2GAuCF8YFRQzSwGOuM7zJb3hgfES2o0SdGSWRLDfGhRgLpGAXS4q0VCoUCBEHwzd8skM/nUSqVoCjKybz8O1CtVn2LeZ4H27YxnU6xXC6x3+95PJPJoFKpoN1uY7vdnhfww3w+x3A4xGaz4d3quo5sNvuTTyaTXKTb7cJ13csCzWbzKKaqKj/zXC4HSZKO8iRcLpcxGAwwmUzC7UDTNBSLRSQSiVAeyUGNpM4v4XA4oNfr8eMMLJBKpWCaJn9fLBawLAur1Qq73Y6b/H0pyNyrTDYMA7PZDKPRCOv1+uQ3ZCqZe9UcOI6DTqfjW5zMbLVa3Bu6RaE9GI/HZ/P9fp8/qfipYROj+ukEnuQgEx0GImKGHGSC/UO/kTAibG+QwIfMQrUyeRXusaM94x3ERW2GT8Zn78EGACRmoKUJhB1TQAAAABJRU5ErkJggg=="):
+2012-04-29T18:59:55+00:00 app[web.1]: 
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-cache-1.1/lib/rack/cache/context.rb:132:in `forward'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-cache-1.1/lib/rack/cache/context.rb:241:in `fetch'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-cache-1.1/lib/rack/cache/context.rb:181:in `lookup'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-cache-1.1/lib/rack/cache/context.rb:65:in `call!'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-cache-1.1/lib/rack/cache/context.rb:50:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/railties-3.2.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2012-04-29T18:59:55+00:00 app[web.1]:   /home/heroku_rack/lib/last_access.rb:15:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   /home/heroku_rack/lib/static_assets.rb:9:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:134:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/urlmap.rb:64:in `block in call'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/urlmap.rb:49:in `each'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/urlmap.rb:49:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/connection.rb:42:in `receive_data'
+2012-04-29T18:59:55+00:00 app[web.1]:   /home/heroku_rack/lib/date_header.rb:14:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/connection.rb:76:in `block in pre_process'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/connection.rb:74:in `pre_process'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/connection.rb:74:in `catch'
+2012-04-29T18:59:55+00:00 app[web.1]:   eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/connection.rb:57:in `process'
+2012-04-29T18:59:55+00:00 app[web.1]:   .bundle/gems/ruby/1.9.1/gems/rack-1.4.1/lib/rack/builder.rb:134:in `call'
+2012-04-29T18:59:55+00:00 app[web.1]:   eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+2012-04-29T18:59:55+00:00 heroku[router]: GET catalogodedados.heroku.com/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYlJREFUeNrMVD1rwlAUPfkwBBxFKQQlDhmjqzj4F9w7FfwThZaW9n8UnDrrn1BEXNTBRQQhEE1ERRR0Sd990A7VaKJJ6YHzEu4N99z3zrsRGo2GAuCF8YFRQzSwGOuM7zJb3hgfES2o0SdGSWRLDfGhRgLpGAXS4q0VCoUCBEHwzd8skM/nUSqVoCjKybz8O1CtVn2LeZ4H27YxnU6xXC6x3+95PJPJoFKpoN1uY7vdnhfww3w+x3A4xGaz4d3quo5sNvuTTyaTXKTb7cJ13csCzWbzKKaqKj/zXC4HSZKO8iRcLpcxGAwwmUzC7UDTNBSLRSQSiVAeyUGNpM4v4XA4oNfr8eMMLJBKpWCaJn9fLBawLAur1Qq73Y6b/H0pyNyrTDYMA7PZDKPRCOv1+uQ3ZCqZe9UcOI6DTqfjW5zMbLVa3Bu6RaE9GI/HZ/P9fp8/qfipYROj+ukEnuQgEx0GImKGHGSC//UO/kTAibG+QwIfMQrUyeRXusaM94x3ERW2GT8Zn78EGACRmoKUJhB1TQAAAABJRU5ErkJggg== dyno=web.1 queue=0 wait=0ms service=12ms status=404 bytes=728
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/server.rb:156:in `start'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/controllers/controller.rb:80:in `start'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/backends/base.rb:57:in `start'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/runner.rb:177:in `run_command'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) bin/thin:6:in `<top (required)>'
+2012-04-29T18:59:55+00:00 app[web.1]:   thin (1.2.6) lib/thin/runner.rb:143:in `run!'
+2012-04-29T18:59:55+00:00 app[web.1]:   /usr/ruby1.9.2/bin/thin:19:in `<main>'
+2012-04-29T18:59:55+00:00 app[web.1]: 
+2012-04-29T18:59:55+00:00 app[web.1]:   /usr/ruby1.9.2/bin/thin:19:in `load'
+2012-04-29T18:59:55+00:00 app[web.1]: 
+2012-04-29T18:59:55+00:00 app[web.1]: cache: [GET /data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYlJREFUeNrMVD1rwlAUPfkwBBxFKQQlDhmjqzj4F9w7FfwThZaW9n8UnDrrn1BEXNTBRQQhEE1ERRR0Sd990A7VaKJJ6YHzEu4N99z3zrsRGo2GAuCF8YFRQzSwGOuM7zJb3hgfES2o0SdGSWRLDfGhRgLpGAXS4q0VCoUCBEHwzd8skM/nUSqVoCjKybz8O1CtVn2LeZ4H27YxnU6xXC6x3+95PJPJoFKpoN1uY7vdnhfww3w+x3A4xGaz4d3quo5sNvuTTyaTXKTb7cJ13csCzWbzKKaqKj/zXC4HSZKO8iRcLpcxGAwwmUzC7UDTNBSLRSQSiVAeyUGNpM4v4XA4oNfr8eMMLJBKpWCaJn9fLBawLAur1Qq73Y6b/H0pyNyrTDYMA7PZDKPRCOv1+uQ3ZCqZe9UcOI6DTqfjW5zMbLVa3Bu6RaE9GI/HZ/P9fp8/qfipYROj+ukEnuQgEx0GImKGHGSC//UO/kTAibG+QwIfMQrUyeRXusaM94x3ERW2GT8Zn78EGACRmoKUJhB1TQAAAABJRU5ErkJggg==] miss
+2012-04-29T18:59:55+00:00 heroku[nginx]: 187.65.180.245 - - [29/Apr/2012:18:59:55 +0000] "GET /data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYlJREFUeNrMVD1rwlAUPfkwBBxFKQQlDhmjqzj4F9w7FfwThZaW9n8UnDrrn1BEXNTBRQQhEE1ERRR0Sd990A7VaKJJ6YHzEu4N99z3zrsRGo2GAuCF8YFRQzSwGOuM7zJb3hgfES2o0SdGSWRLDfGhRgLpGAXS4q0VCoUCBEHwzd8skM/nUSqVoCjKybz8O1CtVn2LeZ4H27YxnU6xXC6x3+95PJPJoFKpoN1uY7vdnhfww3w+x3A4xGaz4d3quo5sNvuTTyaTXKTb7cJ13csCzWbzKKaqKj/zXC4HSZKO8iRcLpcxGAwwmUzC7UDTNBSLRSQSiVAeyUGNpM4v4XA4oNfr8eMMLJBKpWCaJn9fLBawLAur1Qq73Y6b/H0pyNyrTDYMA7PZDKPRCOv1+uQ3ZCqZe9UcOI6DTqfjW5zMbLVa3Bu6RaE9GI/HZ/P9fp8/qfipYROj+ukEnuQgEx0GImKGHGSC//UO/kTAibG+QwIfMQrUyeRXusaM94x3ERW2GT8Zn78EGACRmoKUJhB1TQAAAABJRU5ErkJggg== HTTP/1.1" 404 728 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0" catalogodedados.heroku.com
+2012-04-29T19:03:07+00:00 app[web.1]: 
+2012-04-29T19:03:07+00:00 app[web.1]: Started POST "/datasets" for 187.65.159.160 at 2012-04-29 12:03:07 -0700
+2012-04-29T19:03:07+00:00 app[web.1]: 
+2012-04-29T19:03:07+00:00 app[web.1]: Processing by DatasetsController#create as HTML
+2012-04-29T19:03:07+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"RswSUBK0v47oZ6sPtTWgakoOJbVYdBcMmacyExy+tDI=", "dataset"=>{"orgao_id"=>"124", "nome"=>"AERÓDROMOS - ESATA", "tipo_dataset_id"=>"1", "url"=>"http://www.anac.gov.br/Conteudo.aspx?slCD_ORIGEM=8&ttCD_CHAVE=7 ", "url_documentacao"=>"", "descricao"=>"Base de dados - Profissional ESATA\r\n", "comentario"=>"", "licenca_id"=>"3", "guarda"=>"Agência Nacional de Aviação Civil - ANAC ", "origem"=>"Agência Nacional de Aviação Civil - ANAC ", "vcges_attributes"=>{"1335725755069"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#controle-social-prestacao-contas ", "_destroy"=>"false"}, "1335725755259"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#aeroportos ", "_destroy"=>"false"}, "1335725755477"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#infraestrutura-turismo ", "_destroy"=>"false"}, "1335725755925"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#legislacao-normas ", "_destroy"=>"false"}, "1335725761640"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#arquivos ", "_destr
+2012-04-29T19:03:07+00:00 app[web.1]: oy"=>"false"}}, "granularidade_temporal_id"=>"4", "cobertura_temporal"=>"", "granularidade_geografica_id"=>"1", "cobertura_geografica"=>"", "nao_ha_data"=>"1", "data_atualizacao(3i)"=>"1", "data_atualizacao(2i)"=>"4", "data_atualizacao(1i)"=>"2012"}, "formato_dataset_id"=>["1", "2"], "commit"=>"Salvar"}
+2012-04-29T19:03:07+00:00 app[web.1]: Redirected to http://catalogodedados.heroku.com/datasets/2818
+2012-04-29T19:03:07+00:00 app[web.1]: Completed 302 Found in 80ms (ActiveRecord: 64.2ms)
+2012-04-29T19:03:07+00:00 app[web.1]: cache: [POST /datasets] invalidate, pass
+2012-04-29T19:03:07+00:00 heroku[router]: POST catalogodedados.heroku.com/datasets dyno=web.1 queue=0 wait=0ms service=95ms status=302 bytes=113
+2012-04-29T19:03:07+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:03:07 +0000] "POST /datasets HTTP/1.1" 302 124 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:03:07+00:00 app[web.1]: 
+2012-04-29T19:03:07+00:00 app[web.1]: 
+2012-04-29T19:03:07+00:00 app[web.1]: Started GET "/datasets/2818" for 187.65.159.160 at 2012-04-29 12:03:07 -0700
+2012-04-29T19:03:07+00:00 app[web.1]: Processing by DatasetsController#show as HTML
+2012-04-29T19:03:07+00:00 app[web.1]:   Parameters: {"id"=>"2818"}
+2012-04-29T19:03:07+00:00 app[web.1]:   Rendered datasets/show.html.erb within layouts/application (21.0ms)
+2012-04-29T19:03:07+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T19:03:07+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 10.4ms | ActiveRecord: 24.2ms)
+2012-04-29T19:03:07+00:00 app[web.1]: cache: [GET /datasets/2818] miss
+2012-04-29T19:03:07+00:00 heroku[router]: GET catalogodedados.heroku.com/datasets/2818 dyno=web.1 queue=0 wait=0ms service=104ms status=200 bytes=3198
+2012-04-29T19:03:07+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:03:07 +0000] "GET /datasets/2818 HTTP/1.1" 200 1448 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:08:48+00:00 app[web.1]: 
+2012-04-29T19:08:48+00:00 app[web.1]: 
+2012-04-29T19:08:48+00:00 app[web.1]: Started POST "/datasets" for 187.65.159.160 at 2012-04-29 12:08:48 -0700
+2012-04-29T19:08:48+00:00 app[web.1]: Processing by DatasetsController#create as HTML
+2012-04-29T19:08:48+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"RswSUBK0v47oZ6sPtTWgakoOJbVYdBcMmacyExy+tDI=", "dataset"=>{"orgao_id"=>"124", "nome"=>"Aeroportos ", "tipo_dataset_id"=>"1", "url"=>"http://www.anac.gov.br/Conteudo.aspx?slCD_ORIGEM=8&ttCD_CHAVE=118 ", "url_documentacao"=>"", "descricao"=>"Base de dados - Aeroporto - Informações administrativas\r\n", "comentario"=>"", "licenca_id"=>"3", "guarda"=>"Agência Nacional de Aviação Civil - ANAC ", "origem"=>"Agência Nacional de Aviação Civil - ANAC ", "vcges_attributes"=>{"1335726502404"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#controle-social-prestacao-contas ", "_destroy"=>"false"}, "1335726502684"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#aeroportos ", "_destroy"=>"false"}, "1335726502922"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#infraestrutura-turismo ", "_destroy"=>"false"}, "1335726503177"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#legislacao-normas ", "_destroy"=>"false"}, "1335726503453"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#ar
+2012-04-29T19:08:48+00:00 app[web.1]: quivos ", "_destroy"=>"false"}}, "granularidade_temporal_id"=>"4", "cobertura_temporal"=>"", "granularidade_geografica_id"=>"1", "cobertura_geografica"=>"", "nao_ha_data"=>"1", "data_atualizacao(3i)"=>"1", "data_atualizacao(2i)"=>"4", "data_atualizacao(1i)"=>"2012"}, "formato_dataset_id"=>["9", "1", "2", "4"], "commit"=>"Salvar"}
+2012-04-29T19:08:48+00:00 app[web.1]: Redirected to http://catalogodedados.heroku.com/datasets/2819
+2012-04-29T19:08:48+00:00 app[web.1]: Completed 302 Found in 106ms (ActiveRecord: 90.0ms)
+2012-04-29T19:08:48+00:00 app[web.1]: cache: [POST /datasets] invalidate, pass
+2012-04-29T19:08:48+00:00 heroku[router]: POST catalogodedados.heroku.com/datasets dyno=web.1 queue=0 wait=0ms service=117ms status=302 bytes=113
+2012-04-29T19:08:48+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:08:48 +0000] "POST /datasets HTTP/1.1" 302 124 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:08:48+00:00 app[web.1]: 
+2012-04-29T19:08:48+00:00 app[web.1]: 
+2012-04-29T19:08:48+00:00 app[web.1]: Started GET "/datasets/2819" for 187.65.159.160 at 2012-04-29 12:08:48 -0700
+2012-04-29T19:08:48+00:00 app[web.1]: Processing by DatasetsController#show as HTML
+2012-04-29T19:08:48+00:00 app[web.1]:   Parameters: {"id"=>"2819"}
+2012-04-29T19:08:48+00:00 app[web.1]:   Rendered datasets/show.html.erb within layouts/application (164.3ms)
+2012-04-29T19:08:48+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T19:08:48+00:00 app[web.1]: Completed 200 OK in 176ms (Views: 11.3ms | ActiveRecord: 163.5ms)
+2012-04-29T19:08:48+00:00 app[web.1]: cache: [GET /datasets/2819] miss
+2012-04-29T19:08:48+00:00 heroku[router]: GET catalogodedados.heroku.com/datasets/2819 dyno=web.1 queue=0 wait=0ms service=184ms status=200 bytes=3237
+2012-04-29T19:08:48+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:08:48 +0000] "GET /datasets/2819 HTTP/1.1" 200 1475 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:10:18+00:00 app[web.1]: 
+2012-04-29T19:10:18+00:00 app[web.1]: 
+2012-04-29T19:10:18+00:00 app[web.1]: Started POST "/datasets" for 187.65.159.160 at 2012-04-29 12:10:18 -0700
+2012-04-29T19:10:18+00:00 app[web.1]: Processing by DatasetsController#create as HTML
+2012-04-29T19:10:18+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"RswSUBK0v47oZ6sPtTWgakoOJbVYdBcMmacyExy+tDI=", "dataset"=>{"orgao_id"=>"124", "nome"=>"Heliponto ", "tipo_dataset_id"=>"1", "url"=>"http://www.anac.gov.br/Conteudo.aspx?slCD_ORIGEM=8&ttCD_CHAVE=122 ", "url_documentacao"=>"", "descricao"=>"Base de dados - Heliponto - Informações administrativas\r\n", "comentario"=>"", "licenca_id"=>"3", "guarda"=>"Agência Nacional de Aviação Civil - ANAC ", "origem"=>"Agência Nacional de Aviação Civil - ANAC ", "vcges_attributes"=>{"1335726651792"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#controle-social-prestacao-contas ", "_destroy"=>"false"}, "1335726652121"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#aeroportos ", "_destroy"=>"false"}, "1335726652449"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#infraestrutura-turismo ", "_destroy"=>"false"}, "1335726652787"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#legislacao-normas ", "_destroy"=>"false"}, "1335726653182"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#arq
+2012-04-29T19:10:18+00:00 app[web.1]: uivos ", "_destroy"=>"false"}}, "granularidade_temporal_id"=>"4", "cobertura_temporal"=>"", "granularidade_geografica_id"=>"1", "cobertura_geografica"=>"", "nao_ha_data"=>"1", "data_atualizacao(3i)"=>"1", "data_atualizacao(2i)"=>"4", "data_atualizacao(1i)"=>"2012"}, "formato_dataset_id"=>["9", "1", "2", "4"], "commit"=>"Salvar"}
+2012-04-29T19:10:18+00:00 app[web.1]: Redirected to http://catalogodedados.heroku.com/datasets/2820
+2012-04-29T19:10:18+00:00 app[web.1]: Completed 302 Found in 111ms (ActiveRecord: 97.6ms)
+2012-04-29T19:10:18+00:00 app[web.1]: cache: [POST /datasets] invalidate, pass
+2012-04-29T19:10:18+00:00 heroku[router]: POST catalogodedados.heroku.com/datasets dyno=web.1 queue=0 wait=0ms service=120ms status=302 bytes=113
+2012-04-29T19:10:18+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:10:18 +0000] "POST /datasets HTTP/1.1" 302 124 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:10:18+00:00 app[web.1]: 
+2012-04-29T19:10:18+00:00 app[web.1]: 
+2012-04-29T19:10:18+00:00 app[web.1]: Started GET "/datasets/2820" for 187.65.159.160 at 2012-04-29 12:10:18 -0700
+2012-04-29T19:10:18+00:00 app[web.1]: Processing by DatasetsController#show as HTML
+2012-04-29T19:10:18+00:00 app[web.1]:   Parameters: {"id"=>"2820"}
+2012-04-29T19:10:18+00:00 app[web.1]:   Rendered datasets/show.html.erb within layouts/application (20.3ms)
+2012-04-29T19:10:18+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T19:10:18+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 9.6ms | ActiveRecord: 18.5ms)
+2012-04-29T19:10:18+00:00 app[web.1]: cache: [GET /datasets/2820] miss
+2012-04-29T19:10:18+00:00 heroku[router]: GET catalogodedados.heroku.com/datasets/2820 dyno=web.1 queue=0 wait=0ms service=38ms status=200 bytes=3235
+2012-04-29T19:10:18+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:10:18 +0000] "GET /datasets/2820 HTTP/1.1" 200 1467 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:11:51+00:00 app[web.1]: 
+2012-04-29T19:11:51+00:00 app[web.1]: 
+2012-04-29T19:11:51+00:00 app[web.1]: Started POST "/datasets" for 187.65.159.160 at 2012-04-29 12:11:51 -0700
+2012-04-29T19:11:51+00:00 app[web.1]: Processing by DatasetsController#create as HTML
+2012-04-29T19:11:51+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"RswSUBK0v47oZ6sPtTWgakoOJbVYdBcMmacyExy+tDI=", "dataset"=>{"orgao_id"=>"124", "nome"=>"Documentação e serviços onlines ", "tipo_dataset_id"=>"1", "url"=>"http://www.anac.gov.br/Conteudo.aspx?slCD_ORIGEM=8&ttCD_CHAVE=126 ", "url_documentacao"=>"", "descricao"=>"Banco de dados - Sistema de informação - ANAC\r\n", "comentario"=>"", "licenca_id"=>"3", "guarda"=>"Agência Nacional de Aviação Civil - ANAC ", "origem"=>"Agência Nacional de Aviação Civil - ANAC ", "vcges_attributes"=>{"1335726723485"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#controle-social-prestacao-contas ", "_destroy"=>"false"}, "1335726723686"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#aeroportos ", "_destroy"=>"false"}, "1335726723884"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#infraestrutura-turismo ", "_destroy"=>"false"}, "1335726724094"=>{"uri"=>"http://vocab.e.gov.br/2011/03/vcge#legislacao-normas ", "_destroy"=>"false"}, "1335726724329"=>{"uri"=>"http://vocab.e.gov.br/2
+2012-04-29T19:11:51+00:00 app[web.1]: 011/03/vcge#sistemas-informacao ", "_destroy"=>"false"}, "1335726724745"=>{"uri"=>"", "_destroy"=>"false"}}, "granularidade_temporal_id"=>"4", "cobertura_temporal"=>"", "granularidade_geografica_id"=>"1", "cobertura_geografica"=>"", "nao_ha_data"=>"1", "data_atualizacao(3i)"=>"1", "data_atualizacao(2i)"=>"4", "data_atualizacao(1i)"=>"2012"}, "formato_dataset_id"=>["9", "1", "2", "4"], "commit"=>"Salvar"}
+2012-04-29T19:11:51+00:00 app[web.1]: Redirected to http://catalogodedados.heroku.com/datasets/2821
+2012-04-29T19:11:51+00:00 app[web.1]: Completed 302 Found in 91ms (ActiveRecord: 79.5ms)
+2012-04-29T19:11:51+00:00 app[web.1]: cache: [POST /datasets] invalidate, pass
+2012-04-29T19:11:51+00:00 heroku[router]: POST catalogodedados.heroku.com/datasets dyno=web.1 queue=0 wait=0ms service=102ms status=302 bytes=113
+2012-04-29T19:11:51+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:11:51 +0000] "POST /datasets HTTP/1.1" 302 124 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:11:51+00:00 app[web.1]: 
+2012-04-29T19:11:51+00:00 app[web.1]: 
+2012-04-29T19:11:51+00:00 app[web.1]: Started GET "/datasets/2821" for 187.65.159.160 at 2012-04-29 12:11:51 -0700
+2012-04-29T19:11:51+00:00 app[web.1]: Processing by DatasetsController#show as HTML
+2012-04-29T19:11:51+00:00 app[web.1]:   Parameters: {"id"=>"2821"}
+2012-04-29T19:11:51+00:00 heroku[router]: GET catalogodedados.heroku.com/datasets/2821 dyno=web.1 queue=0 wait=0ms service=37ms status=200 bytes=3286
+2012-04-29T19:11:51+00:00 app[web.1]:   Rendered datasets/show.html.erb within layouts/application (20.9ms)
+2012-04-29T19:11:51+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T19:11:51+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 8.8ms | ActiveRecord: 20.0ms)
+2012-04-29T19:11:51+00:00 app[web.1]: cache: [GET /datasets/2821] miss
+2012-04-29T19:11:51+00:00 heroku[nginx]: 187.65.159.160 - - [29/Apr/2012:19:11:51 +0000] "GET /datasets/2821 HTTP/1.1" 200 1471 "http://catalogodedados.heroku.com/datasets/new" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:11:58+00:00 heroku[router]: GET catalogodedados.heroku.com/users/sign_in dyno=web.1 queue=0 wait=0ms service=23ms status=200 bytes=2376
+2012-04-29T19:11:58+00:00 heroku[nginx]: 187.65.180.245 - - [29/Apr/2012:19:11:58 +0000] "GET /users/sign_in HTTP/1.1" 200 1172 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:11:58+00:00 app[web.1]: 
+2012-04-29T19:11:58+00:00 app[web.1]: 
+2012-04-29T19:11:58+00:00 app[web.1]: Started GET "/users/sign_in" for 187.65.180.245 at 2012-04-29 12:11:58 -0700
+2012-04-29T19:11:58+00:00 app[web.1]: Processing by Devise::SessionsController#new as HTML
+2012-04-29T19:11:58+00:00 app[web.1]:   Rendered devise/_links.erb (1.0ms)
+2012-04-29T19:11:58+00:00 app[web.1]:   Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+2012-04-29T19:11:58+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T19:11:58+00:00 app[web.1]: Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+2012-04-29T19:11:58+00:00 app[web.1]: cache: [GET /users/sign_in] miss
+2012-04-29T19:12:21+00:00 app[web.1]: 
+2012-04-29T19:12:21+00:00 app[web.1]: 
+2012-04-29T19:12:21+00:00 app[web.1]: Started POST "/users/sign_in" for 187.65.180.245 at 2012-04-29 12:12:21 -0700
+2012-04-29T19:12:21+00:00 app[web.1]: Processing by Devise::SessionsController#create as HTML
+2012-04-29T19:12:21+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"vacefwwuPr5Nh2uoal0KGimSUdnVEYTcuKqTKxbLFCQ=", "user"=>{"email"=>"rlalmeida@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+2012-04-29T19:12:21+00:00 app[web.1]: Redirected to http://catalogodedados.heroku.com/
+2012-04-29T19:12:21+00:00 app[web.1]: Completed 302 Found in 210ms (ActiveRecord: 0.0ms)
+2012-04-29T19:12:21+00:00 app[web.1]: cache: [POST /users/sign_in] invalidate, pass
+2012-04-29T19:12:21+00:00 heroku[router]: POST catalogodedados.heroku.com/users/sign_in dyno=web.1 queue=0 wait=0ms service=218ms status=302 bytes=100
+2012-04-29T19:12:21+00:00 heroku[nginx]: 187.65.180.245 - - [29/Apr/2012:19:12:21 +0000] "POST /users/sign_in HTTP/1.1" 302 111 "http://catalogodedados.heroku.com/users/sign_in" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com
+2012-04-29T19:12:21+00:00 app[web.1]: 
+2012-04-29T19:12:21+00:00 app[web.1]: 
+2012-04-29T19:12:21+00:00 app[web.1]: Started GET "/" for 187.65.180.245 at 2012-04-29 12:12:21 -0700
+2012-04-29T19:12:21+00:00 app[web.1]: Processing by OrgaosController#index as HTML
+2012-04-29T19:12:21+00:00 app[web.1]:   Rendered orgaos/index.html.erb within layouts/application (247.2ms)
+2012-04-29T19:12:21+00:00 app[web.1]:   Rendered layouts/_ga.html.erb (0.0ms)
+2012-04-29T19:12:21+00:00 app[web.1]: Completed 200 OK in 289ms (Views: 81.3ms | ActiveRecord: 206.5ms)
+2012-04-29T19:12:21+00:00 app[web.1]: cache: [GET /] miss
+2012-04-29T19:12:21+00:00 heroku[router]: GET catalogodedados.heroku.com/ dyno=web.1 queue=0 wait=0ms service=297ms status=200 bytes=9252
+2012-04-29T19:12:21+00:00 heroku[nginx]: 187.65.180.245 - - [29/Apr/2012:19:12:21 +0000] "GET / HTTP/1.1" 200 2247 "http://catalogodedados.heroku.com/users/sign_in" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19" catalogodedados.heroku.com

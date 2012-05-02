@@ -20,6 +20,12 @@ class Orgao < ActiveRecord::Base
 	
 	default_scope order("created_at DESC")
 	
+	scope :com_nome_semelhante_a,
+  lambda { |nome|
+    # TODO Como ignorar o case (COLOCA O UPPER DOS 2 LADOS?)
+    where("nome ilike ?", "%#{nome}%")
+  }
+	
 	def datasets_as_s
 		#header = "nome;descricao;url;guarda;url_documentacao;formatos;cobertura_temporal;cobertura_geografica;origem;vcge;granularidade_temporal;granularidade_geografica;tipo_dataset;licenca;created_at;updated_at;data_atualizacao;comentario;nao_ha_data\n"
 		header = "nome;descricao;url;tipo;vcge;\n"

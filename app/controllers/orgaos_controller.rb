@@ -97,4 +97,15 @@ class OrgaosController < ApplicationController
 
     render :text => orgao.datasets_as_s
 	end
+	
+	def search
+		q = params[:q]
+		
+		if(q && !q.empty?)
+			@orgaos = Orgao.com_nome_semelhante_a(q).paginate(:page => params[:page], :limit => 15)
+		else
+			@orgaos = Orgao.paginate(:page => params[:page], :limit => 15)
+		end
+	end
+	
 end

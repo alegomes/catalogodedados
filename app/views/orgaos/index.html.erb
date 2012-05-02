@@ -1,28 +1,19 @@
 <h1>Sistema para Catalogação de Datasets</h1>
-	
-<table class='border'>
-  <tr>
-    <th width='40%'>Nome do Órgão</th>
-    <th width='50%'>Data de Cadastramento</th>
-	<th width='5%'>Quantidade de Datasets</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @orgaos.each do |orgao| %>
-  <tr>
-    <td><%= orgao.nome %></td>
-    <td align='center'><%= orgao.created_at %></td>
-	<td align='center'><%= orgao.datasets.size %></td>
-    <td align='center'><%= link_to 'Detalhes', orgao %></td>
-    <td align='center'><%= link_to 'Editar', edit_orgao_path(orgao) %></td>
-    <td align='center'><%= link_to 'Remover', orgao, confirm: 'Certeza?', method: :delete %></td>
-	<td align='center'><%= link_to 'CSV', export_csv_orgao_path(orgao) %></td>
-  </tr>
-<% end %>
-</table>
-<%= will_paginate @orgaos %>
-<br/>
+
+<div class="busca">
+	<%= form_tag '/orgaos/search', :method => :get, :id => 'pesquisa', :remote => true do %>
+	  <%= text_field_tag :q, 'Busca por Órgãos' %>
+	  <%= submit_tag 'Buscar' %>
+  <% end %>
+</div>
+
+<div id='loading'>
+	<img src="/assets/carregando.gif" />
+</div>
+
+<div id='orgaos'>
+	<%= render 'orgaos' %>
+</div>
+
 <%= link_to 'Cadastrar novo órgão', new_orgao_path, :class => 'button' %>

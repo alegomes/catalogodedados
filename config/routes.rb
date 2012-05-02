@@ -14,6 +14,9 @@ Catalogodedados::Application.routes.draw do
 		get 'new_link', :on => :collection
 		get 'export_csv', :on => :member
 	  resources :links 
+		collection do
+			get 'search'
+		end
 	end
 
   resources :vcges

@@ -1,0 +1,14 @@
+OK - No rodapé, diferenciar Orgão e Datasets dos demais cadastros
+
+Orgao
+
+OK - Páginas associadas (desde que não sejam subórgãos)
+
+Dataset
+
+- Vincular cadastro de dataset ao orgao específico
+OK - URL Documentação -> URL da Documentação Técnica do Dataset
+OK - Descrição -> Descrição do Dataset e Links para sua documentação semântica
+- Remover Termos VCGE do rodapé
+OK - Ordenar combos por ordem alfabética
+OK - Remover dia da data de última atualização
