@@ -8,7 +8,9 @@ Catalogodedados::Application.routes.draw do
 
   root :to => 'orgaos#index'
 
-  resources :datasets
+  resources :datasets do
+		get 'search', :on => :collection
+	end
 
   resources :orgaos do
 		get 'new_link', :on => :collection

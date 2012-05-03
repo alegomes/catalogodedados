@@ -17,6 +17,12 @@ class Dataset < ActiveRecord::Base
 						:vcges, :presence => true
 						
 	before_save :check_data_atualizacao
+
+	scope :com_nome_semelhante_a,
+  lambda { |nome|
+    # TODO Como ignorar o case (COLOCA O UPPER DOS 2 LADOS?)
+    where("nome ilike ?", "%#{nome}%")
+  }
 	
 	private
 	def check_data_atualizacao

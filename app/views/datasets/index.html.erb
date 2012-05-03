@@ -1,10 +1,15 @@
 <h1>Datasets Cadastrados</h1>
 
-<div class='center'>
-	
-	<div id='datasets'>
-		<%= render 'datasets' %>
-	</div>
-
-	<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
+<div class="busca">
+	<%= form_tag '/datasets/search', :method => :get, :id => 'pesquisa', :remote => true do %>
+	  <%= text_field_tag :q, 'Busca por Datasets' %>
+	  <%= submit_tag 'Buscar' %>
+	 <img id='loading' src="/assets/carregando.gif" />
+  <% end %>
 </div>
+	
+<div id='datasets'>
+	<%= render 'datasets' %>
+</div>
+
+<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
