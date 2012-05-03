@@ -18,7 +18,7 @@ class Orgao < ActiveRecord::Base
 
 	validates :nome, :url, :licenca, :siorg, :presence => true
 	
-	default_scope order("created_at DESC")
+	default_scope order("nome ASC")
 	
 	scope :com_nome_semelhante_a,
   lambda { |nome|
