@@ -34,8 +34,6 @@ var orgao = {
 		var defaultValue = "Busca por Órgãos";
 		
 		$("#q").keyup(function(data, event) {
-			alert(this.value);
-			alert(this.value != defaultValue);
 			if (this.value != defaultValue && this.value != null && this.value.length > 3) {
 				$(this.form).submit();
 				//$(".emprestimos").remove();
