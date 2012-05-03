@@ -5,11 +5,8 @@
 	<%= form_tag '/orgaos/search', :method => :get, :id => 'pesquisa', :remote => true do %>
 	  <%= text_field_tag :q, 'Busca por Órgãos' %>
 	  <%= submit_tag 'Buscar' %>
+	 <img id='loading' src="/assets/carregando.gif" />
   <% end %>
-</div>
-
-<div id='loading'>
-	<img src="/assets/carregando.gif" />
 </div>
 
 <div id='orgaos'>

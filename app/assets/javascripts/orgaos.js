@@ -31,14 +31,16 @@ var orgao = {
 		$('#loading').hide();
 		$('#q').focus();
 		
-		$('#q').keyup(function(data, event) {
-			if (this.value != null && this.value.length > 3) {
+		var defaultValue = "Busca por Órgãos";
+		
+		$("#q").keyup(function(data, event) {
+			alert(this.value);
+			alert(this.value != defaultValue);
+			if (this.value != defaultValue && this.value != null && this.value.length > 3) {
 				$(this.form).submit();
 				//$(".emprestimos").remove();
 			}
 		})
-		
-		var defaultValue = 'Busca por Órgaos';
 		
 		$("#q").focus(function(){
 			if ($(this).attr("value") == defaultValue) {
