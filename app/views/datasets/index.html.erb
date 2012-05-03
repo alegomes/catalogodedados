@@ -2,38 +2,9 @@
 
 <div class='center'>
 	
-	<table class='border'>
-	  <tr>
-	    <th>Orgao</th>
-	    <th>Tipo dataset</th>
-	    <th>Nome</th>
-	    <th>Formato dataset</th>
-	    <th>Licenca</th>
-	    <th></th>
-	    <th></th>
-	    <th></th>
-	  </tr>
-
-	<% @datasets.each do |dataset| %>
-	  <tr>
-	    <td><%= dataset.orgao.nome %></td>
-	    <td><%= dataset.tipo_dataset.nome if dataset.tipo_dataset %></td>
-	    <td><%= dataset.nome %></td>
-	    <td>
-			<% dataset.formato_datasets.each do |formato| %>
-				<%= formato.nome %>&nbsp;
-			<% end %>
-		</td>
-	    <td><%= dataset.licenca.nome %></td>
-	    <td align='center'><%= link_to 'Detalhar', dataset %></td>
-	    <td align='center'><%= link_to 'Editar', edit_dataset_path(dataset) %></td>
-	    <td align='center'><%= link_to 'Remover', dataset, confirm: 'Certeza?', method: :delete %></td>
-	  </tr>
-	<% end %>
-	</table>
-	<%= will_paginate @datasets %>
-
-	<br />
+	<div id='datasets'>
+		<%= render 'datasets' %>
+	</div>
 
 	<%= link_to 'Novo Dataset', new_dataset_path, :class => 'button' %>
 </div>
