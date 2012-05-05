@@ -2,7 +2,7 @@
 
 <div class="busca">
 	<%= form_tag '/datasets/search', :method => :get, :id => 'pesquisa', :remote => true do %>
-	  <%= text_field_tag :q, 'Busca por Datasets' %>
+	  <%= text_field_tag :term, 'Busca por Datasets' %>
 	  <%= submit_tag 'Buscar' %>
 	 <img id='loading' src="/assets/carregando.gif" />
   <% end %>

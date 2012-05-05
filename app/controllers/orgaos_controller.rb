@@ -101,13 +101,20 @@ class OrgaosController < ApplicationController
 	end
 	
 	def search
-		q = params[:q]
+		q = params[:term]
 				
 		if(q && !q.empty?)
 			@orgaos = Orgao.com_nome_semelhante_a(q).paginate(:page => params[:page], :limit => 15)
 		else
 			@orgaos = Orgao.paginate(:page => params[:page], :limit => 15)
 		end
+
+		respond_to do |format|
+      format.js
+      format.json do
+	 			render json: @orgaos.collect { |orgao| {:id => orgao.id, :value => orgao.nome} }
+			end
+    end
 
 	end
 end

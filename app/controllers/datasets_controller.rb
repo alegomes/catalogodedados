@@ -51,8 +51,10 @@ class DatasetsController < ApplicationController
   def create
     @dataset = Dataset.new(params[:dataset])
 
-		params[:formato_dataset_id].each do |formato_id|
-			@dataset.formato_datasets << FormatoDataset.find(formato_id)
+		if params[:formato_dataset_id]
+			params[:formato_dataset_id].each do |formato_id|
+				@dataset.formato_datasets << FormatoDataset.find(formato_id)
+			end
 		end
 
     respond_to do |format|
@@ -102,7 +104,7 @@ class DatasetsController < ApplicationController
   end
 
 	def search
-		q = params[:q]
+		q = params[:term]
 				
 		if(q && !q.empty?)
 			@datasets = Dataset.com_nome_semelhante_a(q).paginate(:page => params[:page], :limit => 15)

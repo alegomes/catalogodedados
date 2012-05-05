@@ -13,7 +13,9 @@
 
   <div class="field">
     <%= f.label :orgao %><br />
-    <%= f.collection_select(:orgao_id, Orgao.all, :id, :nome, {:include_blank => true}) %> (obrigatório)
+	<%= text_field_tag :orgao_nome, @dataset.orgao ? @dataset.orgao.nome : "Digite o nome do órgão...", {:size => '100'} %> (obrigatório)
+	<%= f.hidden_field :orgao_id %>
+    <!-- %= f.collection_select(:orgao_id, Orgao.all, :id, :nome, {:include_blank => true}) % --> 
   </div>
 
   <div class="field">

@@ -3,7 +3,7 @@
 
 <div class="busca">
 	<%= form_tag '/orgaos/search', :method => :get, :id => 'pesquisa', :remote => true do %>
-	  <%= text_field_tag :q, 'Busca por Órgãos' %>
+	  <%= text_field_tag :term, 'Busca por Órgãos' %>
 	  <%= submit_tag 'Buscar' %>
 	 <img id='loading' src="/assets/carregando.gif" />
   <% end %>
