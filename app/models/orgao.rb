@@ -1,3 +1,5 @@
+#encoding: UTF-8
+
 class Orgao < ActiveRecord::Base
 	belongs_to :created_by, :class_name => "User",  :foreign_key => "created_by"
 	belongs_to :modified_by, :class_name => "User",  :foreign_key => "modified_by"
@@ -28,7 +30,7 @@ class Orgao < ActiveRecord::Base
 	
 	def datasets_as_s
 		#header = "nome;descricao;url;guarda;url_documentacao;formatos;cobertura_temporal;cobertura_geografica;origem;vcge;granularidade_temporal;granularidade_geografica;tipo_dataset;licenca;created_at;updated_at;data_atualizacao;comentario;nao_ha_data\n"
-		header = "nome;descricao;url;tipo;vcge;\n"
+		header = "nome;descricao;url;tipo;vcge;data do cadastro\n"
 		body = ""
 		self.datasets.each do |d|
 			vcges = ""
@@ -43,7 +45,7 @@ class Orgao < ActiveRecord::Base
 			#end
 			
 			#body << "\"#{nome}\";\"#{d.descricao}\";\"#{d.url}\";\"#{d.guarda}\";\"#{d.url_documentacao}\";\"#{formatos}\";\"#{d.cobertura_temporal}\";\"#{d.cobertura_geografica}\";\"#{d.origem}\";\"#{vcges}\";\"#{d.granularidade_temporal.nome}\";\"#{d.granularidade_geografica.nome}\";\"#{d.tipo_dataset.nome}\";\"#{d.licenca.nome}\";\"#{d.created_at}\";\"#{d.updated_at}\";\"#{d.data_atualizacao}\";\"#{d.comentario}\";\"#{d.nao_ha_data}\"\n"
-			body << "\"#{d.nome}\";\"#{d.descricao}\";\"#{d.url}\";\"#{d.tipo_dataset.nome}\";\"#{vcges}\";\n"
+			body << "\"#{d.nome}\";\"#{d.descricao}\";\"#{d.url}\";\"#{d.tipo_dataset.nome}\";\"#{vcges}\";\"#{d.created_at}\";\n"
 		end
 		(header + body)
 	end
