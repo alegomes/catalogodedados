@@ -1,0 +1,6 @@
+--2012-05-20 20:00:18--  https://s3.amazonaws.com/hkpgbackups/app2940579@heroku.com/a080.dump?AWSAccessKeyId=AKIAJYEDAEBRU6KYW6QA&Expires=1337554852&Signature=lDfI%2F4JCJG2LKqHP9UmgLsLi0jk%3D
+Resolving s3.amazonaws.com (s3.amazonaws.com)... 72.21.195.97
+Connecting to s3.amazonaws.com (s3.amazonaws.com)|72.21.195.97|:443... connected.
+ERROR: cannot verify s3.amazonaws.com's certificate, issued by `/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=Terms of use at https://www.verisign.com/rpa (c)09/CN=VeriSign Class 3 Secure Server CA - G2':
+  Unable to locally verify the issuer's authority.
+To connect to s3.amazonaws.com insecurely, use `--no-check-certificate'.
