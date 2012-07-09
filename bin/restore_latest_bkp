@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo su postgres -c "psql -c 'drop database catalogodedados_development'"
+sudo su postgres -c "psql -c 'create database catalogodedados_development'"
+
+pg_restore -Fc -d catalogodedados_development db/dump/a129.dump -U postgres

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+bkp=$(heroku pgbackups | tail -1 | cut -d \| -f1 )
+#bkp=$(expr "${bkp}" : '[[:space:]]*\(.*\)[[:space:]]*$')
+bkp=$(echo "${bkp}" | awk '{gsub(/^ +| +$/,"")}1')
+wget --no-check-certificate -c -O db/dump/${bkp}.dump $(heroku pgbackups:url $bkp) 
