@@ -39,7 +39,8 @@ class Orgao < ActiveRecord::Base
 			
 			d.vcges.each do |v|
 				vcges << "#{v.uri},"
-				termos << "#{/.*#(.*)$/.match(v.uri)[1]},"
+				termos << "#{/.*#(.*)$/.match(v.uri)[1]}," 
+				# #{/.*[#\/](.*)$/.match(v)[1]} -> Pra resolver problema relatado pelo Marcelo				
 			end
 			
 			#d.formato_datasets.each do |f|
