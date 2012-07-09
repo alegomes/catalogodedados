@@ -95,7 +95,7 @@ class OrgaosController < ApplicationController
 		nome_arquivo = "#{orgao.nome}.csv"
 
     response.content_type = 'text/plain'
-    response.headers['Content-Disposition'] = "attachment; filename=#{nome_arquivo}"
+    response.headers['Content-Disposition'] = "attachment; filename=\"#{nome_arquivo}\""
 
     render :text => orgao.datasets_as_s
 	end
