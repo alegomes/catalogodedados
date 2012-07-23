@@ -11,5 +11,5 @@
   <%= render @orgaos %>
 
 </table>
-<%= will_paginate @orgaos %>
+<%= will_paginate @orgaos, :renderer => 'RemoteLinkRenderer' %>
 <br/>
