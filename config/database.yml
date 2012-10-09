@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: catalogodedados_development
+  database: catalogodedados_development_a221
   pool: 5
   username: postgres
   password:
