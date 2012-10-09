@@ -20,7 +20,7 @@ end
 namespace :reports do
 
 	desc 'Totaliza datasets por orgao'
-	task :totalize => :environment do 
+	task :orgaos => :environment do 
 	
 	  header = "SIORG, ORGAO, # DATASETS, CSV, DOC, HTML, ODT, PDF, PPT, XLS, ZIP, Outro, , Avaliações, Desempenho da gestão, Despesas, Geral, Programas"
 		puts header
@@ -64,6 +64,57 @@ namespace :reports do
 			#"#{totais_por_tipo_por_orgao.to_s.sub('{','').sub('}','')},#{totais_por_formato_por_orgao.to_s.sub('{','').sub('}','')}"
 		end
 	end
+
+
+	desc 'Totaliza datasets por orgao'
+	task :datasets => :environment do 
+	
+	  header = "SIORG, ORGAO, NOME, DESCRICAO, URL, GUARDA, COBERTURA TEMPORAL, COBERTURA GEOGRAFICA, ORIGEM, VCGEs, GRANULARIDADE TEMPORAL, GRANULARIDADE GEOGRAFICA, FORMATOS, TIPO, DATA DE CADASTRAMENTO, DATA DA ULTIMA MODIFICACAO"
+		puts header
+		
+		Orgao.all.each do |o|
+			
+			o.datasets.each do |d|
+				
+				vcges = ""
+				formatos = ""
+				
+				d.vcges.each do |v|
+					match = /.*#(.*)$/.match(v.uri)
+					termo = match[1] unless match.nil?
+					vcges << "#{termo.strip}, " unless termo.nil?
+				end
+				
+				d.formato_datasets.each do |f|
+					formatos += "#{f.nome}, "
+				end
+				
+				descricao = d.descricao
+				descricao = descricao.strip 									unless descricao.nil?
+				descricao = descricao.gsub(/[\r]+[\n]+/, " ") unless descricao.nil?
+				
+				puts 	"\"#{o.siorg.codigo}\"," +
+							"\"#{o.nome.strip unless o.nome.nil?}\"," +
+							"\"#{d.nome.strip unless d.nome.nil?}\"," +
+							"\"#{descricao}\"," +
+							"\"#{d.url}\"," +
+							"\"#{d.guarda}\"," +
+							"\"#{d.cobertura_temporal}\"," + 
+							"\"#{d.cobertura_geografica}\"," +
+							"\"#{d.origem}\"," +
+							"\"#{vcges}\"," +
+							"\"#{d.granularidade_temporal.nome}\"," +
+							"\"#{d.granularidade_geografica.nome}\"," +
+							"\"#{formatos}\"," +
+							"\"#{d.tipo_dataset.nome}\"," +
+							"\"#{d.created_at}\"," +
+							"\"#{d.updated_at}\"" 
+				
+			end	
+		end
+	end
+
+
 
 
 	desc 'Totaliza datasets por orgao'
